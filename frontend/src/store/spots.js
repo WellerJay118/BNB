@@ -35,7 +35,7 @@ export const getSpots = () => async(dispatch) => {
 };
 
 export const createSpot = (payload) => async(dispatch) => {
-    const res = await.csrfFetch("/api/spots", {
+    const res = await csrfFetch("/api/spots", {
         method: "POST",
         body: JSON.stringify(payload),
     });
@@ -59,9 +59,9 @@ const spotsReducer = (state = initialState, action) => {
                 newState[spot.id] = spot;
               });}
             return newState;
-        // case ADD:
-        //     newState.spots.push() //maybe use splice?
-        //     return newState
+        case ADD:
+            newState[action.spot.id] = action.spot
+            return newState
         // case EDIT:
             //
         // case REMOVE:
