@@ -29,6 +29,10 @@ function App() {
             <SpotsPage />
           </Route>
 
+          <Route path="/spots/create">
+            <CreateSpot />
+          </Route>
+
           <Route path='/spots/:id'>
             <SingleSpot />
           </Route>

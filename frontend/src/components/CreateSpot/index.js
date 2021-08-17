@@ -32,10 +32,113 @@ const CreateSpot = () => {
     const createLng = (e) => setLng(e.target.value);
     const createCountry = (e) => setCountry(e.target.value);
 
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+        let payload = {
+            userId: sessionUser.id,
+            guestCap,
+            address,
+            city,
+            state,
+            zip,
+            country,
+            spotName,
+            description,
+            price,
+            lat,
+            lng
+        }
+        let createdSpot = await dispatch(createSpot(payload));
+        if(createdSpot) {
+            history.push(`/spots/${createdSpot.id}`);
+        }
+    }
 
 
-
-return null;
+    return (
+        <>
+        <div>
+            <form onSubmit={handleSubmit}>
+                <input
+                    placeholder="Maximum Capacity"
+                    type="text"
+                    required
+                    value={guestCap}
+                    onChange={createGuestCap}
+                />
+                <input
+                    placeholder="Street Address"
+                    type="text"
+                    required
+                    value={address}
+                    onChange={createAddress}
+                />
+                <input
+                    placeholder="City"
+                    type="text"
+                    required
+                    value={city}
+                    onChange={createCity}
+                />
+                <input
+                    placeholder="State"
+                    type="text"
+                    required
+                    value={state}
+                    onChange={createState}
+                />
+                <input
+                    placeholder="Zip Code"
+                    type="number"
+                    required
+                    value={zip}
+                    onChange={createZip}
+                />
+                <input
+                    placeholder="Country"
+                    type="text"
+                    required
+                    value={country}
+                    onChange={createCountry}
+                />
+                <input
+                    placeholder="Property Name"
+                    type="text"
+                    required
+                    value={spotName}
+                    onChange={createSpotName}
+                />
+                <input
+                    placeholder="Description"
+                    type="text"
+                    required
+                    value={description}
+                    onChange={createDescription}
+                />
+                <input
+                    placeholder="Price Per Night"
+                    type="number"
+                    required
+                    value={price}
+                    onChange={createPrice}
+                />
+                <input
+                    placeholder="Latitude"
+                    type="number"
+                    value={lat}
+                    onChange={createLat}
+                />
+                <input
+                    placeholder="Longitude"
+                    type="number"
+                    value={lng}
+                    onChange={createLng}
+                />
+                <button type="submit">Create your own Listing</button>
+            </form>
+        </div>
+        </>
+    );
 }
 
 export default CreateSpot;
