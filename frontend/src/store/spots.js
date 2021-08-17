@@ -2,7 +2,7 @@ import { csrfFetch } from "./csrf";
 
 //Define Action types as constants
 const LOAD = 'spots/';
-// const ADD = 'spots/ADD';
+const ADD = 'spots/ADD';
 // const EDIT = 'spots/EDIT';
 // const REMOVE = 'spots/DELETE';
 
@@ -12,10 +12,10 @@ const load = (spots) => ({
     spots,
 });
 
-// const add = (spot) => ({
-//     type: ADD,
-//     spot,
-// });
+const add = (spot) => ({
+    type: ADD,
+    spot,
+});
 
 // const edit = (spot) => ({
 //     type: EDIT,
@@ -34,17 +34,17 @@ export const getSpots = () => async(dispatch) => {
     dispatch(load(allSpots));
 };
 
-// export const addSpot = (payload) => async(dispatch) => {
-//     const res = await.csrfFetch("/api/spots", {
-//         method: "POST",
-//         body: JSON.stringify(payload),
-//     });
-//     if(res.ok) {
-//         const spot = await res.json();
-//         dispatch(add(spot));
-//         return spot;
-//     }
-// }
+export const createSpot = (payload) => async(dispatch) => {
+    const res = await.csrfFetch("/api/spots", {
+        method: "POST",
+        body: JSON.stringify(payload),
+    });
+    if(res.ok) {
+        const spot = await res.json();
+        dispatch(add(spot));
+        return spot;
+    }
+}
 
 
 //define initial state

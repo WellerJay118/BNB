@@ -7,6 +7,7 @@ import Navigation from "./components/Navigation";
 import SpotsPage from "./components/SpotsPage";
 import Footer from "./components/Navigation/footer";
 import SingleSpot from "./components/SingleSpot";
+import CreateSpot from "./components/CreateSpot";
 
 function App() {
   const dispatch = useDispatch();
