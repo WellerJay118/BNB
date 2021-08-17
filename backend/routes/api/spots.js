@@ -27,7 +27,12 @@ router.get('/:id', asyncHandler(async(req, res) => {
     return res.json(spot);
 }));
 
-
+//create a spot
+router.post('/', asyncHandler(async(req, res) => {
+    let { guestCap, address, city, state, zip, country, spotName, description, price, lat, lng } = req.body;
+    const addSpot = await Spot.create({ guestCap, address, city, state, zip, country, spotName, description, price, lat, lng });
+    return res.json(addSpot);
+}))
 
 
 
