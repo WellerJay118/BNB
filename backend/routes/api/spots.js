@@ -11,10 +11,20 @@ const router = express.Router();
 //will have validation checks here later.
 //will have a get route for all spots, single spot, POST for singleSpot, Patch for single spot, delete for singlespot
 
-
+//get all spots
 router.get('/', asyncHandler(async(req, res) => {
     const spots = await Spot.findAll({include: [Image, User, Review]});
     return res.json(spots);
+}));
+
+//get a single spot based on id
+router.get('/:id', asyncHandler(async(req, res) => {
+    const id = parseInt(req.params.id);
+    const spot = await Spot.findByPk(id, {include: [Image, User, Review, Booking]}); //verify this gives all that I want to have access to. REVIEW? where: {} and nested objects here.
+    // const spot = await Spot.findOne({
+    //     where: spotId
+    // })
+    return res.json(spot);
 }));
 
 
@@ -31,12 +41,6 @@ router.get('/', asyncHandler(async(req, res) => {
 
 
 
-
-// router.get('/:id', asyncHandler(async(req, res) => {
-//     const id = parseInt(req.params.id);
-//     const spot = await Spot.findByPk(id, {include: [Image, User, Review, Booking]}); //verify this gives all that I want to have access to.
-//     return res.json(spot);
-// }));
 
 // router.put('/:id', restoreUser, asyncHandler(async(req, res) => {
 //     const { guestCap, address, city, state, zip, country, spotName, description, price, lat, lng } = req.body;
