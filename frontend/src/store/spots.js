@@ -2,7 +2,6 @@ import { csrfFetch } from "./csrf";
 
 //Define Action types as constants
 const LOAD = 'spots/';
-// const LOAD_IMG = 'spots/LOAD_IMG';
 // const ADD = 'spots/ADD';
 // const EDIT = 'spots/EDIT';
 // const REMOVE = 'spots/DELETE';
