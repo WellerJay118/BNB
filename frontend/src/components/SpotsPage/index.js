@@ -19,7 +19,14 @@ const SpotsPage = () => {
             {
                 spots?.map((spot) =>
                 <div key={spot.id}>
-                    <div><img src={spot?.Images[0].url} alt='' />{spot?.spotName}</div>
+                    <div>
+                        <img src={spot?.Images[0].url} alt='' />
+                        <div>{spot?.spotName}</div>
+                        <div>
+                            Price {spot?.price}
+                            Guests {spot?.guestCap}
+                        </div>
+                    </div>
                 </div>
                 )
             }

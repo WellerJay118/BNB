@@ -5,6 +5,7 @@ import SignupFormPage from "./components/SignupFormPage";
 import * as sessionActions from "./store/session";
 import Navigation from "./components/Navigation";
 import SpotsPage from "./components/SpotsPage";
+import Footer from "./components/Navigation/footer";
 
 function App() {
   const dispatch = useDispatch();
@@ -25,9 +26,10 @@ function App() {
           <Route exact path='/spots'>
             <SpotsPage />
           </Route>
-          
+
         </Switch>
       )}
+      <Footer isLoaded={isLoaded} />
     </>
   );
 }
