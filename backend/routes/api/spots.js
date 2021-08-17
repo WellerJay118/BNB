@@ -1,9 +1,9 @@
 const express = require("express");
 const asyncHandler = require('express-async-handler');
 
-const { restoreUser } = require("../../utils/auth"); //will need to verify user
-const { handleValidationErrors } = require("../../utils/validation");
-const { check } = require('express-validator');
+// const { restoreUser } = require("../../utils/auth"); //will need to verify user
+// const { handleValidationErrors } = require("../../utils/validation");
+// const { check } = require('express-validator');
 
 const { Spot, Image, User, Review, Booking } = require("../../db/models"); //if used later can access the tables themselves.
 

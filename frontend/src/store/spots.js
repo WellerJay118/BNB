@@ -31,8 +31,8 @@ const load = (spots) => ({
 //define thunk creator
 export const getSpots = () => async(dispatch) => {
     const res = await fetch('/api/spots');
-    const spots = await res.json();
-    dispatch(load(spots));
+    const allSpots = await res.json();
+    dispatch(load(allSpots));
 };
 
 // export const addSpot = (payload) => async(dispatch) => {
@@ -56,7 +56,9 @@ const spotsReducer = (state = initialState, action) => {
     let newState = {...state};
     switch(action.type) {
         case LOAD:
-            newState.allSpots = [...action.spots]
+            {action.spots.forEach(spot => {
+                newState[spot.id] = spot;
+              });}
             return newState;
         // case ADD:
         //     newState.spots.push() //maybe use splice?
