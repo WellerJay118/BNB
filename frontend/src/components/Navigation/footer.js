@@ -8,6 +8,7 @@ function Footer ({ isLoaded }) {
     return (
         <>
             <div>
+                {/* TODO: MAKE THIS WORK, CURRENTLY GOES TO LOCALHOST3000/GITHUB OR LINKEDIN */}
                 <NavLink to='https://www.linkedin.com/in/jacob-weller-592795161/'> LinkedIn</NavLink>
                 <NavLink to='https://github.com/WellerJay118'> Github</NavLink>
             </div>
