@@ -18,14 +18,14 @@ router.get('/', asyncHandler(async(req, res) => {
 }));
 
 //get a single spot based on id
-// router.get('/:id', asyncHandler(async(req, res) => {
-//     const id = parseInt(req.params.id);
-//     const spot = await Spot.findByPk(id, {include: [Image, User, Review, Booking]}); //verify this gives all that I want to have access to. REVIEW? where: {} and nested objects here.
-//     // const spot = await Spot.findOne({
-//     //     where: spotId
-//     // })
-//     return res.json(spot);
-// }));
+router.get('/:id', asyncHandler(async(req, res) => {
+    const id = parseInt(req.params.id);
+    const spot = await Spot.findByPk(id, {include: [Image, User, Review, Booking]}); //verify this gives all that I want to have access to. REVIEW? where: {} and nested objects here.
+    // const spot = await Spot.findOne({
+    //     where: spotId
+    // })
+    return res.json(spot);
+}));
 
 
 
