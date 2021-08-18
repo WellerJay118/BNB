@@ -15,7 +15,7 @@ const CreateSpot = () => {
     const [state, setState] = useState('');
     const [spotName, setSpotName] = useState('');
     const [description, setDescription] = useState('');
-    const [price, setPrice] = useState('0');
+    const [price, setPrice] = useState(null);
     const [lat, setLat] = useState(null);
     const [lng, setLng] = useState(null);
     const [country, setCountry] = useState('');
@@ -63,13 +63,6 @@ const CreateSpot = () => {
         <div>
             <form onSubmit={handleSubmit}>
                 <input
-                    placeholder="Maximum Capacity"
-                    type="text"
-                    required
-                    value={guestCap}
-                    onChange={createGuestCap}
-                />
-                <input
                     placeholder="Street Address"
                     type="text"
                     required
@@ -111,6 +104,13 @@ const CreateSpot = () => {
                     onChange={createSpotName}
                 />
                 <input
+                    placeholder="Maximum Capacity"
+                    type="text"
+                    required
+                    value={guestCap}
+                    onChange={createGuestCap}
+                />
+                <input
                     placeholder="Description"
                     type="text"
                     required
@@ -124,7 +124,7 @@ const CreateSpot = () => {
                     value={price}
                     onChange={createPrice}
                 />
-                <input
+                {/* <input
                     placeholder="Latitude"
                     type="number"
                     value={lat}
@@ -135,7 +135,7 @@ const CreateSpot = () => {
                     type="number"
                     value={lng}
                     onChange={createLng}
-                />
+                /> */}
                 <input
                     placeholder="Image URL"
                     type="text"
