@@ -19,6 +19,7 @@ const CreateSpot = () => {
     const [lat, setLat] = useState(null);
     const [lng, setLng] = useState(null);
     const [country, setCountry] = useState('');
+    const [url, setUrl] = useState('');
 
     const createGuestCap = (e) => setGuestcap(e.target.value);
     const createAddress = (e) => setAddress(e.target.value);
@@ -31,6 +32,7 @@ const CreateSpot = () => {
     const createLat = (e) => setLat(e.target.value);
     const createLng = (e) => setLng(e.target.value);
     const createCountry = (e) => setCountry(e.target.value);
+    const createUrl = (e) => setUrl(e.target.value)
 
     const handleSubmit = async (e) => {
         e.preventDefault();
@@ -46,7 +48,8 @@ const CreateSpot = () => {
             description,
             price,
             lat,
-            lng
+            lng,
+            url
         }
         let createdSpot = await dispatch(createSpot(payload));
         if(createdSpot) {
@@ -132,6 +135,12 @@ const CreateSpot = () => {
                     type="number"
                     value={lng}
                     onChange={createLng}
+                />
+                <input
+                    placeholder="Image URL"
+                    type="text"
+                    value={url}
+                    onChange={createUrl}
                 />
                 <button type="submit">Create your own Listing</button>
             </form>

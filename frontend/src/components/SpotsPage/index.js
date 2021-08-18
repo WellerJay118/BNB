@@ -1,8 +1,8 @@
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { NavLink } from "react-router-dom";
+// import { NavLink } from "react-router-dom";
 import { getSpots } from "../../store/spots"
-import styles from "./SpotsPage.module.css"
+// import styles from "./SpotsPage.module.css"
 
 const SpotsPage = () => {
     const dispatch = useDispatch();
@@ -20,7 +20,7 @@ const SpotsPage = () => {
                 spots?.map((spot) =>
                 <div key={spot.id}>
                     <div>
-                        <img src={spot?.Images[0].url} alt='' />
+                        {/* <img src={spot?.Images[0].url} alt='' /> */}
                         <div>{spot?.spotName}</div>
                         <div>
                             Price {spot?.price}
