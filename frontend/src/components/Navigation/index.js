@@ -40,7 +40,7 @@ function Navigation({ isLoaded }){
   return (
     <div className="nav-links-container">
       <NavLink className="Navbar-link" exact to="/">Home</NavLink>
-      <NavLink className="Navbar-link" exact to="/spots">Spots</NavLink>
+      <NavLink className="Navbar-link" exact to="/spots">Listings</NavLink>
       {isLoaded && sessionLinks}
    </div>
     // <ul>
