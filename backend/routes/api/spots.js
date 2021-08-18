@@ -48,8 +48,16 @@ router.patch('/:id', asyncHandler(async(req, res) => {
 
     const updated = await Spot.findOne({where: {id: id}, include: Image})
     return res.json(updated);
-
-
 }) );
 
+//delete spot
+router.delete('/:id', asyncHandler(async(req, res) => {
+    const {id} = req.params;
+    const spot = await Spot.findByPk(id);
+    const image = await Image.findOne({where: {id:id}});
+    await image.destroy()
+    await spot.destroy();
+
+    return res.json({})
+}))
 module.exports = router;
