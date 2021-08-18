@@ -80,12 +80,6 @@ const EditSpot = () => {
                     value={state}
                     onChange={updateState}
                 />
-                {/* <input
-                    placeholder="Zip Code"
-                    type="number"
-                    value={zip}
-                    onChange={updateZip}
-                /> */}
                 <input
                     placeholder="Country"
                     type="text"
@@ -121,18 +115,6 @@ const EditSpot = () => {
                     value={price}
                     onChange={updatePrice}
                 />
-                {/* <input
-                    placeholder="Latitude"
-                    type="number"
-                    value={lat}
-                    onChange={updateLat}
-                />
-                <input
-                    placeholder="Longitude"
-                    type="number"
-                    value={lng}
-                    onChange={updateLng}
-                /> */}
                 <input
                     placeholder="Image URL"
                     type="text"
