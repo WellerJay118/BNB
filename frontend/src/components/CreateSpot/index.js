@@ -11,26 +11,20 @@ const CreateSpot = () => {
     const [guestCap, setGuestcap] = useState('');
     const [address, setAddress] = useState('');
     const [city, setCity] = useState('');
-    // const [zip, setZip] = useState(null) //verify zipcode can be null
     const [state, setState] = useState('');
     const [spotName, setSpotName] = useState('');
     const [description, setDescription] = useState('');
     const [price, setPrice] = useState(null);
-    // const [lat, setLat] = useState(null);
-    // const [lng, setLng] = useState(null);
     const [country, setCountry] = useState('');
     const [url, setUrl] = useState('');
 
     const createGuestCap = (e) => setGuestcap(e.target.value);
     const createAddress = (e) => setAddress(e.target.value);
     const createCity = (e) => setCity(e.target.value);
-    // const createZip = (e) => setZip(e.target.value);
     const createState = (e) => setState(e.target.value);
     const createSpotName = (e) => setSpotName(e.target.value);
     const createDescription = (e) => setDescription(e.target.value);
     const createPrice = (e) => setPrice(e.target.value);
-    // const createLat = (e) => setLat(e.target.value);
-    // const createLng = (e) => setLng(e.target.value);
     const createCountry = (e) => setCountry(e.target.value);
     const createUrl = (e) => setUrl(e.target.value)
 
@@ -42,13 +36,10 @@ const CreateSpot = () => {
             address,
             city,
             state,
-            // zip,
             country,
             spotName,
             description,
             price,
-            // lat,
-            // lng,
             url
         }
         let createdSpot = await dispatch(createSpot(payload));
@@ -83,12 +74,6 @@ const CreateSpot = () => {
                     value={state}
                     onChange={createState}
                 />
-                {/* <input
-                    placeholder="Zip Code"
-                    type="number"
-                    value={zip}
-                    onChange={createZip}
-                /> */}
                 <input
                     placeholder="Country"
                     type="text"
@@ -124,18 +109,6 @@ const CreateSpot = () => {
                     value={price}
                     onChange={createPrice}
                 />
-                {/* <input
-                    placeholder="Latitude"
-                    type="number"
-                    value={lat}
-                    onChange={createLat}
-                />
-                <input
-                    placeholder="Longitude"
-                    type="number"
-                    value={lng}
-                    onChange={createLng}
-                /> */}
                 <input
                     placeholder="Image URL"
                     type="text"
