@@ -1,5 +1,5 @@
 import { useDispatch, useSelector } from "react-redux";
-import { useParams } from "react-router";
+import { useParams, useHistory } from "react-router";
 import { useEffect } from "react";
 import { getSpots } from "../../store/spots";
 // import styles from "./SingleSpot.module.css"
@@ -7,8 +7,9 @@ import { getSpots } from "../../store/spots";
 
 const SingleSpot = () => {
     const dispatch = useDispatch();
+    const history = useHistory();
     const { id } = useParams();
-    // const sessionUser = useSelector(state => state.session.user);
+    const sessionUser = useSelector(state => state.session.user);
 
     const spots = useSelector(state => Object.values(state.spots));
     // const spots = useSelector(state => state.spots)
@@ -37,7 +38,12 @@ const SingleSpot = () => {
             {/* {console.log(singleSpot)} */}
             {/* {console.log('abc ' + sessionUser.id)} sessionUser.id we can use to verify if the logged in person is the same as the "owner" of the place. */}
             {/* <h1>{singleSpot?.spotName}</h1> */}
+            {/* do a sessionUser.id === user.id as toggle for displaying button to edit */}
+            {singleSpot?.userId === sessionUser?.id ? (
+                <button onClick={(e) => history.push(`spots/${id}/edit`)}>Edit</button>
+            ): null}
             </div>
+            {/* Should be able to just render in the component of a review form or a booking form here, similar to App */}
 </>
 
     )

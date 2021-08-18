@@ -3,7 +3,7 @@ import { csrfFetch } from "./csrf";
 //Define Action types as constants
 const LOAD = 'spots/';
 const ADD = 'spots/ADD';
-// const EDIT = 'spots/EDIT';
+const EDIT = 'spots/EDIT';
 // const REMOVE = 'spots/DELETE';
 
 //define action creators
@@ -17,10 +17,10 @@ const add = (spot) => ({
     spot,
 });
 
-// const edit = (spot) => ({
-//     type: EDIT,
-//     spot,
-// });
+const edit = (spot) => ({
+    type: EDIT,
+    spot,
+});
 
 // const remove = (spot) => ({
 //     type: REMOVE,
@@ -46,6 +46,17 @@ export const createSpot = (payload) => async(dispatch) => {
     }
 }
 
+export const editSpot = (id, payload) => async(dispatch) => {
+    const res = await csrfFetch(`/api/spots/${id}`, {
+        method: "PATCH",
+        body: JSON.stringify(payload)
+    });
+    if(res.ok) {
+        const spot = await res.json();
+        dispatch(edit(spot));
+        return spot;
+    }
+}
 
 //define initial state
 const initialState = {}
@@ -63,7 +74,8 @@ const spotsReducer = (state = initialState, action) => {
             newState[action.spot.id] = action.spot
             return newState
         // case EDIT:
-            //
+        //     newState[action.spot] = action.spot;
+        //     return newState
         // case REMOVE:
             //
         default:

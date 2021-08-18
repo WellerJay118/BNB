@@ -37,38 +37,19 @@ router.post('/', asyncHandler(async(req, res) => {
     return res.json(addSpot);
 }))
 
+//edit spot
+router.put('/:id', asyncHandler(async(req, res) => {
+    const { guestCap, address, city, state, country, spotName, description, price, url: url } = req.body;
+    const { id } = req.params;
+    const spot = await Spot.findByPk(id); //do i include Review and Booking here? Or would that go into its own booking or review edit?
+    await spot.update({guestCap, address, city, state, country, spotName, description, price})
+    const image = await Image.findOne({ where: {spotId: id}})
+    await image.update({spotId, url})
+
+    const updated = await Spot.findOne({where: {id: id}, include: Image})
+    return res.json(updated);
 
 
-
-
-
-
-
-
-
-
-
-
-
-// router.put('/:id', restoreUser, asyncHandler(async(req, res) => {
-//     const { guestCap, address, city, state, zip, country, spotName, description, price, lat, lng } = req.body;
-//     const { id } = req.params;
-//     const spot = await Spot.findByPk(id); //do i include Review and Booking here? Or would that go into its own booking or review edit?
-//     if (spot.userId === userId) {
-//         newSpot = await Spot.update({
-//             guestCap,
-//             address,
-//             city,
-//             state,
-//             zip,
-//             country,
-//             spotName,
-//             description,
-//             price,
-//             lat,
-//             lng
-//         })
-//     }
-// }) );
+}) );
 
 module.exports = router;
