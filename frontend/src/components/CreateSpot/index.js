@@ -15,7 +15,6 @@ const CreateSpot = () => {
     const [spotName, setSpotName] = useState('');
     const [description, setDescription] = useState('');
     const [price, setPrice] = useState(null);
-    const [country, setCountry] = useState('');
     const [url, setUrl] = useState('');
 
     const createGuestCap = (e) => setGuestcap(e.target.value);
@@ -25,7 +24,6 @@ const CreateSpot = () => {
     const createSpotName = (e) => setSpotName(e.target.value);
     const createDescription = (e) => setDescription(e.target.value);
     const createPrice = (e) => setPrice(e.target.value);
-    const createCountry = (e) => setCountry(e.target.value);
     const createUrl = (e) => setUrl(e.target.value)
 
     const handleSubmit = async (e) => {
@@ -36,7 +34,6 @@ const CreateSpot = () => {
             address,
             city,
             state,
-            // country,
             spotName,
             description,
             price,
@@ -75,13 +72,6 @@ const CreateSpot = () => {
                     value={state}
                     onChange={createState}
                 />
-                {/* <input
-                    placeholder="Country"
-                    type="text"
-                    required
-                    value={country}
-                    onChange={createCountry}
-                /> */}
                 <input
                     placeholder="Property Name"
                     type="text"

@@ -22,7 +22,6 @@ const EditSpot = () => {
     const [spotName, setSpotName] = useState(toEdit.spotName);
     const [description, setDescription] = useState(toEdit.description);
     const [price, setPrice] = useState(toEdit.price);
-    const [country, setCountry] = useState(toEdit.country);
     const [url, setUrl] = useState(toEdit.Images[0].url);
 
     const updateGuestCap = (e) => setGuestcap(e.target.value);
@@ -32,7 +31,6 @@ const EditSpot = () => {
     const updateSpotName = (e) => setSpotName(e.target.value);
     const updateDescription = (e) => setDescription(e.target.value);
     const updatePrice = (e) => setPrice(e.target.value);
-    const updateCountry = (e) => setCountry(e.target.value);
     const updateUrl = (e) => setUrl(e.target.value)
 
     const handleSubmit = async (e) => {
@@ -43,7 +41,6 @@ const EditSpot = () => {
             address,
             city,
             state,
-            // country,
             spotName,
             description,
             price,
@@ -80,13 +77,6 @@ const EditSpot = () => {
                     value={state}
                     onChange={updateState}
                 />
-                {/* <input
-                    placeholder="Country"
-                    type="text"
-                    required
-                    value={country}
-                    onChange={updateCountry}
-                /> */}
                 <input
                     placeholder="Property Name"
                     type="text"
