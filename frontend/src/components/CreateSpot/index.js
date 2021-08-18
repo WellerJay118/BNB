@@ -90,7 +90,6 @@ const CreateSpot = () => {
                 <input
                     placeholder="Zip Code"
                     type="number"
-                    required
                     value={zip}
                     onChange={createZip}
                 />
