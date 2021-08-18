@@ -43,7 +43,7 @@ const EditSpot = () => {
             address,
             city,
             state,
-            country,
+            // country,
             spotName,
             description,
             price,
@@ -80,13 +80,13 @@ const EditSpot = () => {
                     value={state}
                     onChange={updateState}
                 />
-                <input
+                {/* <input
                     placeholder="Country"
                     type="text"
                     required
                     value={country}
                     onChange={updateCountry}
-                />
+                /> */}
                 <input
                     placeholder="Property Name"
                     type="text"

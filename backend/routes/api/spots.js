@@ -29,8 +29,8 @@ router.get('/:id', asyncHandler(async(req, res) => {
 
 //create a spot
 router.post('/', asyncHandler(async(req, res) => {
-    let { userId, guestCap, address, city, state, country, spotName, description, price, url: url } = req.body;
-    const addSpot = await Spot.create({ userId, guestCap, address, city, state, country, spotName, description, price });
+    let { userId, guestCap, address, city, state, spotName, description, price, url: url } = req.body;
+    const addSpot = await Spot.create({ userId, guestCap, address, city, state, spotName, description, price });
 
     const { id: spotId } = addSpot;
     await Image.create({spotId, url})
@@ -39,10 +39,10 @@ router.post('/', asyncHandler(async(req, res) => {
 
 //edit spot
 router.put('/:id', asyncHandler(async(req, res) => {
-    const { guestCap, address, city, state, country, spotName, description, price, url: url } = req.body;
+    const { guestCap, address, city, state, spotName, description, price, url: url } = req.body;
     const { id } = req.params;
     const spot = await Spot.findByPk(id); //do i include Review and Booking here? Or would that go into its own booking or review edit?
-    await spot.update({guestCap, address, city, state, country, spotName, description, price})
+    await spot.update({guestCap, address, city, state, spotName, description, price})
     const image = await Image.findOne({ where: {spotId: id}})
     await image.update({spotId, url})
 

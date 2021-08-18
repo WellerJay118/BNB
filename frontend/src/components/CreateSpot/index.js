@@ -36,7 +36,7 @@ const CreateSpot = () => {
             address,
             city,
             state,
-            country,
+            // country,
             spotName,
             description,
             price,
@@ -52,6 +52,7 @@ const CreateSpot = () => {
     return (
         <>
         <div>
+            <h1>Create your listing</h1>
             <form onSubmit={handleSubmit}>
                 <input
                     placeholder="Street Address"
@@ -74,13 +75,13 @@ const CreateSpot = () => {
                     value={state}
                     onChange={createState}
                 />
-                <input
+                {/* <input
                     placeholder="Country"
                     type="text"
                     required
                     value={country}
                     onChange={createCountry}
-                />
+                /> */}
                 <input
                     placeholder="Property Name"
                     type="text"

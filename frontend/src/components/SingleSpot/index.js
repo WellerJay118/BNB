@@ -40,7 +40,7 @@ const SingleSpot = () => {
             {/* <h1>{singleSpot?.spotName}</h1> */}
             {/* do a sessionUser.id === user.id as toggle for displaying button to edit */}
             {singleSpot?.userId === sessionUser?.id ? (
-                <button onClick={(e) => history.push(`spots/${id}/edit`)}>Edit</button>
+                <button onClick={(e) => history.push(`/spots/${id}/edit`)}>Edit</button>
             ): null}
             </div>
             {/* Should be able to just render in the component of a review form or a booking form here, similar to App */}
