@@ -54,10 +54,25 @@ router.patch('/:id', asyncHandler(async(req, res) => {
 router.delete('/:id', asyncHandler(async(req, res) => {
     const {id} = req.params;
     const spot = await Spot.findByPk(id);
-    const image = await Image.findOne({where: {id:id}});
-    await image.destroy()
+    const images = await Image.findAll({where: {spotId:id}});
+    const reviews = await Review.findAll({where: {spotId: id}})
+    const bookings = await Booking.findAll({where: {spotId: id}})
+    //do for loop...otherway is to do a cascade delete within the backend model
+    for (let i of bookings) {
+        await i.destroy();
+    }
+
+    for (let i of images) {
+        await i.destroy();
+    }
+
+    for (let i of reviews) {
+        await i.destroy();
+    }
+
     await spot.destroy();
 
-    return res.json({})
+
+    return res.json({ })
 }))
 module.exports = router;

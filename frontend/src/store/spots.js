@@ -22,9 +22,9 @@ const edit = (spot) => ({
     spot,
 });
 
-const remove = (spot) => ({
+const remove = (id) => ({
     type: REMOVE,
-    spot,
+    id,
 });
 
 //define thunk creator
@@ -58,7 +58,7 @@ export const editSpot = (id, payload) => async(dispatch) => {
     }
 }
 
-export const deleteSpot = (id) => {
+export const deleteSpot = (id) => async(dispatch) => {
     const res = await csrfFetch(`/api/spots/${id}`, {
         method: 'DELETE',
     })

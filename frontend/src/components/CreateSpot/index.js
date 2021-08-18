@@ -24,7 +24,7 @@ const CreateSpot = () => {
     const createSpotName = (e) => setSpotName(e.target.value);
     const createDescription = (e) => setDescription(e.target.value);
     const createPrice = (e) => setPrice(e.target.value);
-    const createUrl = (e) => setUrl(e.target.value)
+    const createUrl = (e) => setUrl(e.target.value);
 
     const handleSubmit = async (e) => {
         e.preventDefault();
