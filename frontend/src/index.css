@@ -57,7 +57,6 @@
     padding: 12px;
     justify-content: center;
     width: 100%;
-
 }
 
 .footer__links{
@@ -75,4 +74,30 @@
     color: black;
     margin-left: 10px;
     margin: 5px;
+}
+
+.nav-links-container {
+    border: 1px solid black;
+    display: flex;
+    flex-direction: row;
+    justify-content:flex-end;
+}
+
+.Navbar-link:hover {
+    cursor:pointer;
+    font-weight: bold;
+}
+.Navbar-link {
+    text-decoration: none;
+    color: black;
+    margin: auto 7px;
+}
+
+.navbar-button {
+    border: 0;
+    background-color:white;
+}
+
+.profile-button {
+    height: 25px;
 }

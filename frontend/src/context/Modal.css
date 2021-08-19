@@ -21,4 +21,22 @@
 #modal-content {
   position: absolute;
   background-color:white;
+  width: 500px;
+  height: auto;
+}
+
+.login-form-modal {
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.modal-login__button {
+  max-width: 120px;
+  margin: 20px;
+  border: none;
+  color:black;
+  background-color: rgb(250, 239, 182);
+  border-radius: 20%;
+  font-size: 24px;
 }
