@@ -6,15 +6,14 @@ const SplashPage = () => {
     return (
             <div className="splash__wrapper">
                 <div className="splash__searchbar-container">
-                    <div className="splash__searchbar">
-                        <input className="search" type="text" placeholder="Search"></input>
-                        <input className="guests" type="number" placeholder="Guest Count"></input>
-                        <label>Check-in </label>
-                        <input className="start-dates" type="date"></input>
-                        <label>Check-out </label>
-                        <input className="end-dates" type="date"></input>
-                    </div>
+                    <input className="splash__searchbar" type="text" placeholder="Search"></input>
+                    <input className="splash__guests" type="number" placeholder="Guest Count"></input>
+                    <label>Check-in </label>
+                    <input className="splash__startdates" type="date"></input>
+                    <label>Check-out </label>
+                    <input className="splash__enddates" type="date"></input>
                 </div>
+
                 <div className="splash__tisements-container">
                     <div className="splash__tisements-container--toprated">
                         <p>Top Rated spot</p>
