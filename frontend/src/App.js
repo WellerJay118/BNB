@@ -50,7 +50,7 @@ function App() {
 
         </Switch>
       )}
-      <Footer isLoaded={isLoaded} />
+      <Footer/>
     </>
   );
 }

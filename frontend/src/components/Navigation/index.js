@@ -4,7 +4,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import ProfileButton from './ProfileButton';
 import LoginFormModal from '../LoginFormModal';
 import * as sessionActions from "../../store/session";
-import './Navigation.css';
+
 
 function Navigation({ isLoaded }){
   const dispatch = useDispatch();
