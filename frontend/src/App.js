@@ -4,6 +4,11 @@ import { Route, Switch } from "react-router-dom";
 import SignupFormPage from "./components/SignupFormPage";
 import * as sessionActions from "./store/session";
 import Navigation from "./components/Navigation";
+import SpotsPage from "./components/SpotsPage";
+import Footer from "./components/Navigation/footer";
+import SingleSpot from "./components/SingleSpot";
+import CreateSpot from "./components/CreateSpot";
+import EditSpot from "./components/EditSpot";
 
 function App() {
   const dispatch = useDispatch();
@@ -20,8 +25,26 @@ function App() {
           <Route path="/signup">
             <SignupFormPage />
           </Route>
+
+          <Route exact path='/spots'>
+            <SpotsPage />
+          </Route>
+
+          <Route path="/spots/create">
+            <CreateSpot />
+          </Route>
+
+          <Route exact path='/spots/:id'>
+            <SingleSpot />
+          </Route>
+
+          <Route exact path="/spots/:id/edit">
+            <EditSpot />
+          </Route>
+
         </Switch>
       )}
+      <Footer isLoaded={isLoaded} />
     </>
   );
 }
