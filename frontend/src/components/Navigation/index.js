@@ -20,7 +20,7 @@ function Navigation({ isLoaded }){
   if (sessionUser) {
     sessionLinks = (
       <>
-        <NavLink className="Navbar-link" to="/spots/create">Host!</NavLink>
+        <NavLink className="Navbar-link" to="/spots/create">Become a Host</NavLink>
         <ProfileButton user={sessionUser} />
       </>
     );

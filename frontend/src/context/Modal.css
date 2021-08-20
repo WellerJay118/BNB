@@ -21,14 +21,16 @@
 #modal-content {
   position: absolute;
   background-color:white;
-  width: 500px;
+  width: 300px;
   height: auto;
+  border-radius: 15px;
 }
 
 .login-form-modal {
   display:flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
 }
 
 .modal-login__button {
@@ -39,4 +41,11 @@
   background-color: rgb(250, 239, 182);
   border-radius: 10%;
   font-size: 24px;
+}
+
+.modal-login__cred {
+  padding: 5px;
+}
+.modal-container h1 {
+  padding-left: 35px;
 }
