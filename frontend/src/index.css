@@ -2,6 +2,15 @@
 body {
     font-family: 'Courier New', Courier, monospace;
 }
+
+.test{
+    border: 1px solid red;
+}
+
+.reviewDiv{
+    border: 1px solid green;
+}
+
 .splash__wrapper {
     /* width: 70%;
     height: 500px; */
