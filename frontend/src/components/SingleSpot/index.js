@@ -44,7 +44,7 @@ const SingleSpot = () => {
                 <button onClick={(e) => history.push(`/spots/${id}/edit`)}>Edit</button>
             ): null}
             </div>
-            <SpotReview id={id} />
+            <SpotReview spotId={id} />
             {/* Should be able to just render in the component of a review form or a booking form here, similar to App */}
 </>
 
