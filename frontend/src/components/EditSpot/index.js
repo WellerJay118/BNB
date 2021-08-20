@@ -121,6 +121,7 @@ const EditSpot = () => {
                 {/* onClick={(e) => history.push(`/spots/${id}`)} */}
                 <button type='click' onClick={handleDelete}>Delete this listing</button>
             </form>
+            {/* small change */}
         </>
     )
 

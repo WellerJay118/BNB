@@ -9,6 +9,7 @@ import Footer from "./components/Navigation/footer";
 import SingleSpot from "./components/SingleSpot";
 import CreateSpot from "./components/CreateSpot";
 import EditSpot from "./components/EditSpot";
+import SplashPage from "./components/Splash";
 
 function App() {
   const dispatch = useDispatch();
@@ -22,6 +23,11 @@ function App() {
       <Navigation isLoaded={isLoaded} />
       {isLoaded && (
         <Switch>
+
+          <Route exact path="/">
+            <SplashPage />
+          </Route>
+
           <Route path="/signup">
             <SignupFormPage />
           </Route>
@@ -44,7 +50,7 @@ function App() {
 
         </Switch>
       )}
-      <Footer isLoaded={isLoaded} />
+      <Footer/>
     </>
   );
 }

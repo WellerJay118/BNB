@@ -4,7 +4,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import ProfileButton from './ProfileButton';
 import LoginFormModal from '../LoginFormModal';
 import * as sessionActions from "../../store/session";
-import './Navigation.css';
+
 
 function Navigation({ isLoaded }){
   const dispatch = useDispatch();
@@ -14,24 +14,23 @@ function Navigation({ isLoaded }){
     const credential = 'Demo-lition'
     const password = 'password'
     return dispatch(sessionActions.login({ credential, password }))
-
   }
 
   let sessionLinks;
   if (sessionUser) {
     sessionLinks = (
       <>
-      <ProfileButton user={sessionUser} />
-      <NavLink className="Navbar-link" to="/spots/create">Host!</NavLink>
+        <NavLink className="Navbar-link" to="/spots/create">Host!</NavLink>
+        <ProfileButton user={sessionUser} />
       </>
     );
   } else {
     sessionLinks = (
       <>
         <LoginFormModal />
-        <NavLink to="/signup">Sign Up</NavLink>
+        <NavLink className="Navbar-link" to="/signup">Sign Up</NavLink>
         <div>
-            <button className="demo-button" onClick={demoLogin}>Demo Login</button>
+            <button className="navbar-button Navbar-link" onClick={demoLogin}>Demo Login</button>
           </div>
       </>
     );
@@ -43,12 +42,6 @@ function Navigation({ isLoaded }){
       <NavLink className="Navbar-link" exact to="/spots">Listings</NavLink>
       {isLoaded && sessionLinks}
    </div>
-    // <ul>
-    //   <li>
-    //     <NavLink exact to="/">Home</NavLink>
-    //     {isLoaded && sessionLinks}
-    //   </li>
-    // </ul>
   );
 }
 
