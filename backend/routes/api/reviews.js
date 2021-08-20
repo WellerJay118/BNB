@@ -14,14 +14,14 @@ router.get('/', asyncHandler(async(req, res) => {
 //post /api/reviews
 router.post('/', asyncHandler(async(req, res) => {
     const { userId, spotId, review, rating } = req.body;
-    const userRev = await Review.create({userId, spotId, review, rating});
-    return res.json(userRev);
+    const newReview = await Review.create({userId, spotId, review, rating});
+    return res.json(newReview);
 }));
 //delete /api/reviews/:id
 router.delete('/:id', asyncHandler(async(req, res) => {
-    // const reviewId = parseInt(req.params);
-    const { id } = req.params;
-    const review = await Review.findOne({where: {id: id}})
+    const reviewId = parseInt(req.params);
+    // const { id } = req.params;
+    const review = await Review.findOne({where: {id: reviewId}})
     await review.destroy();
     return res.json({})
 }));

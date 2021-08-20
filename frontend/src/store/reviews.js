@@ -6,7 +6,7 @@ const ADD_REVIEW = 'reviews/ADD'
 const REMOVE_REVIEW = 'reviews/DELETE'
 
 //define action creators
-const loadR = (reviews) = ({
+const loadR = (reviews) => ({
     type: LOAD_REVIEW,
     reviews,
 });
@@ -58,7 +58,7 @@ const reviewsReducer = (state = initialState, action) => {
     switch(action.type) {
         case LOAD_REVIEW: {
             const newState = {...state}
-            action.reviews.forEacht(review => {
+            action.reviews.forEach(review => {
                 newState[review.id] = review
             })
             return newState;

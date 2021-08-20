@@ -2,6 +2,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { useParams, useHistory } from "react-router";
 import { useEffect } from "react";
 import { getSpots } from "../../store/spots";
+import SpotReview from "../SpotReview";
 // import styles from "./SingleSpot.module.css"
 
 
@@ -43,6 +44,7 @@ const SingleSpot = () => {
                 <button onClick={(e) => history.push(`/spots/${id}/edit`)}>Edit</button>
             ): null}
             </div>
+            <SpotReview id={id} />
             {/* Should be able to just render in the component of a review form or a booking form here, similar to App */}
 </>
 

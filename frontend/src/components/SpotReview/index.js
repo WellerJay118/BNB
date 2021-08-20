@@ -1,5 +1,5 @@
 import { useEffect } from 'react';
-import {useDispatch, useEffect} from 'react-redux';
+import { useDispatch, useSelector} from 'react-redux';
 import { getReview } from '../../store/reviews';
 
 const SpotReview = ({ spotId }) => {
@@ -13,7 +13,7 @@ const SpotReview = ({ spotId }) => {
 
     return (
         <div> REVIEWS
-            {reviews?.map((review) =>
+            {spotReviews?.map((review) =>
             <div key={review?.id} className="reviewDiv">
                 <p>Rating: {review?.rating}</p>
                 <p>Review: {review?.review}</p>
