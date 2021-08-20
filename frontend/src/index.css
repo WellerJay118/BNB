@@ -8,7 +8,7 @@
     /* border-radius: 15px; */
     display: flex;
     justify-content: center;
-    /* flex-direction: column; */
+    flex-direction: column;
     align-items: center;
     /* margin-left: auto;
     margin-right: auto; */
@@ -40,21 +40,25 @@
     border:none;
 }
 
-/* .splash__tisements-container {
+.splash__tisements-container {
     display: flex;
     justify-content: space-around;
+    background-color:white;
+
 }
 
 .splash__tisements-container--toprated,
 .splash__tisements-container--signup,
 .splash__tisements-container--lastbooked {
     border: 1px solid black;
+    color: black;
     height: 150px;
     width: 150px;
     display: flex;
     align-items: center;
     justify-content: center;
-} */
+
+}
 
 .footer__wrapper{
     display: flex;

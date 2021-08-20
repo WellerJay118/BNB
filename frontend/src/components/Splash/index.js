@@ -14,7 +14,7 @@ const SplashPage = () => {
                     <input className="splash__enddates" type="date"></input>
                 </div>
 
-                {/* <div className="splash__tisements-container">
+                <div className="splash__tisements-container">
                     <div className="splash__tisements-container--toprated">
                         <p>Top Rated spot</p>
                     </div>
@@ -26,7 +26,7 @@ const SplashPage = () => {
                     <div className="splash__tisements-container--lastbooked">
                         <p>Last booked!</p>
                     </div>
-                </div> */}
+                </div>
             </div>
     )
 }
