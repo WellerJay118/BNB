@@ -9,7 +9,7 @@ function Footer () {
     return (
         <div className="footer__wrapper">
             <div className="footer__description">
-                Created by Jacob Weller
+                Creator: Jacob Weller
             </div>
             <div className="footer__links">
                 <a href='https://www.linkedin.com/in/jacob-weller-592795161/' className="footer__links--linkedin">
