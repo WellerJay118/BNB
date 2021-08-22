@@ -18,14 +18,18 @@ router.post('/', asyncHandler(async(req, res) => {
     return res.json(newReview);
 }));
 //delete /api/reviews/:reviewId
+// /spots/2
 router.delete('/:reviewId', asyncHandler(async(req, res) => {
-    const reviewId = parseInt(req.params.reviewId);
+    // const reviewId = parseInt(req.params.reviewId);
     console.log("%%%%%%%%%", reviewId)
-    const { id } = req.params;
-    console.log("&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&", id)
+    const { reviewId } = req.params;
     const review = await Review.findOne({where: {id: reviewId}})
-    await review.destroy();
-    return res.json({ review })
+    const delReview = await review.destroy();
+    if(review) {
+        return res.json({"Deleted": true})
+    } else {
+        return res.json({ "Deleted": false })
+    }
 }));
 
 module.exports = router;

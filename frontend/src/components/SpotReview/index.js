@@ -3,7 +3,7 @@ import { useDispatch, useSelector} from 'react-redux';
 import { useHistory } from 'react-router-dom';
 import { deleteReview, getReview } from '../../store/reviews';
 
-const SpotReview = ({ spotId, reviewId, userId }) => {
+const SpotReview = ({ spotId, reviewId }) => {
     const history = useHistory();
     const dispatch = useDispatch();
     const reviews = useSelector(state => Object.values(state.reviews));
@@ -17,7 +17,7 @@ const SpotReview = ({ spotId, reviewId, userId }) => {
 
     const handleDelete = async(e) => {
         e.preventDefault();
-        console.log('userID', userId, 'reviewID', reviewId, 'spotId', spotId)
+        console.log('reviewID', reviewId, 'spotId', spotId)
         await dispatch(deleteReview(reviewId))
         history.push(`/spots/${spotId}`)
     }
@@ -29,6 +29,7 @@ const SpotReview = ({ spotId, reviewId, userId }) => {
                 <p>{review?.User?.username}</p>
                 <p>Rating: {review?.rating}</p>
                 <p>Review: {review?.review}</p>
+                {/* {console.log(spotReviews)} */}
                 {sessionUser?.id === review?.User?.id ? (
                     <button onClick={handleDelete}>Delete</button>
                 ):null }
