@@ -27,8 +27,10 @@ const SpotsPage = () => {
                         <div key={spot.id} className="allSpots__indivSpot--container" >
                         <NavLink to={`/spots/${spot.id}`} style={{ textDecoration: 'none', color: 'black'}}>
                             <h3>{spot?.spotName}'s stay</h3>
-
-                            <img className="allSpots__indivSpot--image" src={spot?.Images[0].url} alt='' />
+                            
+                            <div className="allSpots__indivSpot--image-container">
+                                <img className="allSpots__indivSpot--image" src={spot?.Images[0].url} alt='' />
+                            </div>
 
                             <div className="allSpots__indivSpot--location">
                                     <p>{spot?.city}, {spot?.state}</p>

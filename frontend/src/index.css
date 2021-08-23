@@ -84,7 +84,10 @@ body {
 } */
 
 
-
+.allSpots__indivSpot--image-container {
+    display: flex;
+    justify-content: center;
+}
 
 
 

@@ -43,6 +43,8 @@ const SingleSpot = () => {
             <div>
                 {/* <img src={singleSpot?.Images[0].url} alt='' /> IMAGES[0] IS UNDEFINED IF THERE IS NO IMAGE, THIS CAUSES ISSUES */}
                 <p>{singleSpot?.spotName}'s stay</p>
+                {console.log(singleSpot?.Images[0].url)}
+                <img className="spot__image" src={singleSpot?.Images[0].url} alt='' />
 
                 {singleSpot?.userId === sessionUser?.id ? (
                     <button onClick={(e) => history.push(`/spots/${id}/edit`)}>Edit</button>

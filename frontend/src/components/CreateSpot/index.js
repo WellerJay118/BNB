@@ -1,5 +1,5 @@
 import { useDispatch, useSelector } from "react-redux";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useHistory } from "react-router";
 import { createSpot } from "../../store/spots";
 // import Footer from "../Navigation/footer";
@@ -17,6 +17,13 @@ const CreateSpot = () => {
     const [description, setDescription] = useState('');
     const [price, setPrice] = useState('');
     const [url, setUrl] = useState('');
+    const [validationErrors, setValidationErrors] = useState([]);
+
+    useEffect(() => {
+        const errors = [];
+        if(!url.includes(".com")) errors.push("Please include an image URL, don't break my site");
+    });
+
 
     const createGuestCap = (e) => setGuestcap(e.target.value);
     const createAddress = (e) => setAddress(e.target.value);
@@ -106,7 +113,7 @@ const CreateSpot = () => {
                     value={url}
                     onChange={createUrl}
                 />
-                <button type="submit">Create your own Listing</button>
+                <button disabled={validationErrors.length > 0}type="submit">Create your own Listing</button>
             </form>
             {/* <div className="footer__wrapper-splash">
                 <Footer />
