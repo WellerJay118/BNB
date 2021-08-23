@@ -2,7 +2,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { useState } from "react";
 import { useHistory } from "react-router";
 import { createSpot } from "../../store/spots";
-import Footer from "../Navigation/footer";
+// import Footer from "../Navigation/footer";
 
 const CreateSpot = () => {
     const dispatch = useDispatch();

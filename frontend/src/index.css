@@ -14,10 +14,21 @@ body {
 }
 
 
+.allSpots__wrapper {
+    border: 1px solid red
+}
 
+.allspots__indivSpot--container {
+    border: 1px solid purple;
+}
 
+.allSpots__indivSpot--image {
+    /* border: 1px dotted black; */
+}
 
-
+.allSpots__indivSpot--details {
+    /* border: 1px dashed green; */
+}
 
 
 
