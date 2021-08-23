@@ -31,7 +31,6 @@ router.get('/:id', asyncHandler(async(req, res) => {
 router.post('/', asyncHandler(async(req, res) => {
     let { userId, guestCap, address, city, state, spotName, description, price, url: url } = req.body;
     const addSpot = await Spot.create({ userId, guestCap, address, city, state, spotName, description, price});
-
     const { id: spotId } = addSpot;
     await Image.create({spotId, url})
     const newSpot = await Spot.findByPk(spotId, {include: [Image]})

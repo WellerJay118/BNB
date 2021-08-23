@@ -125,3 +125,5 @@ const CreateSpot = () => {
 }
 
 export default CreateSpot;
+
+//implement drop down for state...will have to seed or import state data somewhere.
