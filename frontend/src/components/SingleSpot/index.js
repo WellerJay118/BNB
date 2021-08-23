@@ -53,20 +53,12 @@ const SingleSpot = () => {
             </div>
 
             <div>
-                {/* {console.log('reviews', reviews)}
-                {console.log('spotid', id)}
-                {console.log('spotReviews', spotReviews)} */}
-                {/* {console.log('review', review)} */}
-            {/* {reviews?.map((review) =>
-            <SpotReview key={review.id} spotId={id} review={review} />
-        )} */}
             </div>
             <div>
             {sessionUser ? <ReviewForm /> : null}
             <SpotReview spotId={id} />
-            {/* for Spot Review above if i pass in review={review}  */}
             </div>
-            {/* Should be able to just render in the component of a review form or a booking form here, similar to App */}
+
 </>
 
     )
