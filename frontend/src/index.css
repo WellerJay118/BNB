@@ -137,6 +137,9 @@ textarea {
     margin-bottom: 10px;
     border: none;
 }
+button:hover{
+    cursor: pointer;
+}
 
 .submitReview-button{
     font-family: 'Courier New', Courier, monospace;
@@ -272,6 +275,9 @@ textarea {
 
 .allSpots__indivSpot--container:active {
     box-shadow: 5px 5px 5px 6px rgba(0, 0, 0, 0.5);
+}
+.allSpots__indivSpot--container h3{
+    margin: 0;
 }
 
 .allSpots__indivSpot--container {

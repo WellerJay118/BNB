@@ -73,6 +73,6 @@ router.delete('/:id', asyncHandler(async(req, res) => {
     await spot.destroy();
 
 
-    return res.json({ })
+    return res.json({ spot })
 }))
 module.exports = router;

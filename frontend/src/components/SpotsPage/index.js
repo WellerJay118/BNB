@@ -19,7 +19,7 @@ const SpotsPage = () => {
             <div className="bannerAndSpots">
 
                 <div className="allSpots__banner">
-                <h1> SPOTS PAGE - RENDER BANNER COMPONENT HERE</h1>
+                <h1> All listings</h1>
                 </div>
 
                 <div className="allSpots__spots">
