@@ -62,11 +62,10 @@ const CreateSpot = () => {
 
     return (
         <div className="createSpot__container">
-            <div className="createSpot__wrapper">
-
                 <div className="createSpot__banner">
                 <h1>List your property</h1>
                 </div>
+            <div className="createSpot__wrapper">
                 <div className="createSpot__form">
                 <form onSubmit={handleSubmit}>
                         <label>Location name or title</label>
