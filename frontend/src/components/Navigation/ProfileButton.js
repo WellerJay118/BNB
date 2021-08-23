@@ -29,7 +29,7 @@ function ProfileButton({ user }) {
   };
 
   return (
-    <>
+    <div className="profile__container">
       <button className="profilebutton" onClick={openMenu}>
         <i className="far fa-address-card" />
       </button>
@@ -42,7 +42,7 @@ function ProfileButton({ user }) {
           </li>
         </ul>
       )}
-    </>
+    </div>
   );
 }
 
