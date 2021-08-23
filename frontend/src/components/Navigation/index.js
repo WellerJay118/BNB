@@ -10,7 +10,8 @@ function Navigation({ isLoaded }){
   const dispatch = useDispatch();
   const sessionUser = useSelector(state => state.session.user);
 
-  const demoLogin = () => {
+  const demoLogin = (e) => {
+    e.preventDefault();
     const credential = 'Demo-lition'
     const password = 'password'
     return dispatch(sessionActions.login({ credential, password }))
