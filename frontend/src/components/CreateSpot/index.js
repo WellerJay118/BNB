@@ -2,7 +2,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { useState, useEffect } from "react";
 import { useHistory } from "react-router";
 import { createSpot } from "../../store/spots";
-// import Footer from "../Navigation/footer";
+
 
 const CreateSpot = () => {
     const dispatch = useDispatch();
@@ -54,73 +54,104 @@ const CreateSpot = () => {
         }
     }
 
+    const handleCancel = async(e) => {
+        e.preventDefault();
+        history.push("/spots");
+    }
+
 
     return (
-        <div>
-            <h1>Create your listing</h1>
-            <form onSubmit={handleSubmit}>
-                <input
-                    placeholder="Street Address"
-                    type="text"
-                    required
-                    value={address}
-                    onChange={createAddress}
-                />
-                <input
-                    placeholder="City"
-                    type="text"
-                    required
-                    value={city}
-                    onChange={createCity}
-                />
-                <input
-                    placeholder="State"
-                    type="text"
-                    required
-                    value={state}
-                    onChange={createState}
-                />
-                <input
-                    placeholder="Property Name"
-                    type="text"
-                    required
-                    value={spotName}
-                    onChange={createSpotName}
-                />
-                <input
-                    placeholder="Maximum Capacity"
-                    type="text"
-                    required
-                    value={guestCap}
-                    onChange={createGuestCap}
-                />
-                <input
-                    placeholder="Description"
-                    type="text"
-                    required
-                    value={description}
-                    onChange={createDescription}
-                />
-                <input
-                    placeholder="Price Per Night"
-                    type="number"
-                    required
-                    value={price}
-                    onChange={createPrice}
-                />
-                <input
-                    placeholder="Image URL"
-                    type="text"
-                    value={url}
-                    onChange={createUrl}
-                />
-                <button disabled={validationErrors.length > 0}type="submit">Create your own Listing</button>
-            </form>
-            {/* <div className="footer__wrapper-splash">
-                <Footer />
-            </div> */}
-        </div>
+        <div className="createSpot__container">
+            <div className="createSpot__wrapper">
 
+                <div className="createSpot__banner">
+                <h1>List your property</h1>
+                </div>
+                <div className="createSpot__form">
+                <form onSubmit={handleSubmit}>
+                        <label>Location name or title</label>
+                        <input
+                            className="createSpot__input-field"
+                            placeholder="Property Name:"
+                            type="text"
+                            required
+                            value={spotName}
+                            onChange={createSpotName}
+                            />
+                        <label>Guests allowed</label>
+                        <input
+                            className="createSpot__input-field"
+                            placeholder="Maximum Capacity:"
+                            type="text"
+                            required
+                            value={guestCap}
+                            onChange={createGuestCap}
+                            />
+                        <label>Cost</label>
+                        <input
+                            className="createSpot__input-field"
+                            placeholder="Price Per Night:"
+                            type="number"
+                            required
+                            value={price}
+                            onChange={createPrice}
+                            />
+                        <label>Location</label>
+                        {/* <label>Street Address</label> */}
+                        <input
+                            className="createSpot__input-field"
+                            placeholder="Street Address:"
+                            type="text"
+                            required
+                            value={address}
+                            onChange={createAddress}
+                            />
+                        {/* <label>City</label> */}
+                        <input
+                            className="createSpot__input-field"
+                            placeholder="City:"
+                            type="text"
+                            required
+                            value={city}
+                            onChange={createCity}
+                            />
+                        {/* <label>State</label> */}
+                        <input
+                            className="createSpot__input-field"
+                            placeholder="State:"
+                            type="text"
+                            required
+                            value={state}
+                            onChange={createState}
+                            />
+                        <label>Photo</label>
+                        <input
+                        className="createSpot__input-field"
+                            placeholder="Image URL:"
+                            type="text"
+                            value={url}
+                            onChange={createUrl}
+                            />
+                        <label>Description</label>
+                        <input
+                            className="createSpot__input--description"
+                            placeholder="Description:"
+                            type="text"
+                            required
+                            value={description}
+                            onChange={createDescription}
+                        />
+                    </form>
+                        <div className="createSpot__button-container">
+                        <button className="createSpot__button" disabled={validationErrors.length > 0}type="submit">List!</button>
+                        <button className="createSpot__button" type='click' onClick={handleCancel}>Cancel</button>
+                        </div>
+
+                </div>
+
+            </div>
+
+        </div>
     );
 }
 
