@@ -2,6 +2,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { useParams, useHistory } from "react-router";
 import { useEffect } from "react";
 import { getSpots } from "../../store/spots";
+import { getReview } from "../../store/reviews";
 import SpotReview from "../SpotReview";
 import ReviewForm from "../ReviewForm";
 // import styles from "./SingleSpot.module.css"
@@ -20,33 +21,49 @@ const SingleSpot = () => {
     //     return element.id === parseInt(id)
     // })
 
+    // const reviews = useSelector(state => (Object.values(state.reviews)))
+    // const spotReviews = reviews.filter(review => Number(review.spotId) === Number(id));
+
+
     const singleSpot = spots?.find((element) => {
         return element.id === parseInt(id);
     })
 
     // const singleSpot = spots.filter(spot => Number(spot.id) === Number(id);
 
+
     useEffect(() => {
         dispatch(getSpots());
+        dispatch(getReview());
     }, [dispatch]);
 
     return (
  <>
             <h1>SINGLE SPOT COMPONENT</h1>
             <div>
-                {console.log(singleSpot)}
                 {/* <img src={singleSpot?.Images[0].url} alt='' /> IMAGES[0] IS UNDEFINED IF THERE IS NO IMAGE, THIS CAUSES ISSUES */}
-                <div>{singleSpot?.spotName}'s shack</div>
-            {/* {console.log(singleSpot)} */}
-            {/* {console.log('abc ' + sessionUser.id)} sessionUser.id we can use to verify if the logged in person is the same as the "owner" of the place. */}
-            {/* <h1>{singleSpot?.spotName}</h1> */}
-            {/* do a sessionUser.id === user.id as toggle for displaying button to edit */}
-            {singleSpot?.userId === sessionUser?.id ? (
-                <button onClick={(e) => history.push(`/spots/${id}/edit`)}>Edit</button>
-            ): null}
+                <p>{singleSpot?.spotName}'s stay</p>
+
+                {singleSpot?.userId === sessionUser?.id ? (
+                    <button onClick={(e) => history.push(`/spots/${id}/edit`)}>Edit</button>
+                ): null}
+
             </div>
+
+            <div>
+                {/* {console.log('reviews', reviews)}
+                {console.log('spotid', id)}
+                {console.log('spotReviews', spotReviews)} */}
+                {/* {console.log('review', review)} */}
+            {/* {reviews?.map((review) =>
+            <SpotReview key={review.id} spotId={id} review={review} />
+        )} */}
+            </div>
+            <div>
             {sessionUser ? <ReviewForm /> : null}
             <SpotReview spotId={id} />
+            {/* for Spot Review above if i pass in review={review}  */}
+            </div>
             {/* Should be able to just render in the component of a review form or a booking form here, similar to App */}
 </>
 

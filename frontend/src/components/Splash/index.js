@@ -8,9 +8,9 @@ const SplashPage = () => {
                     <div className="splash__searchbar-container">
                         <input className="splash__searchbar" type="text" placeholder="Search"></input>
                         <input className="splash__guests" type="number" placeholder="Guest Count"></input>
-                        <label>Check-in</label>
+                        <label className="splash__checkin">Check-in:</label>
                         <input className="splash__startdates" type="date"></input>
-                        <label>Check-out</label>
+                        <label className="splash__checkout">Check-out:</label>
                         <input className="splash__enddates" type="date"></input>
                     </div>
                 </div>

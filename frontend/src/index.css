@@ -1,7 +1,4 @@
 /* TODO Add site wide styles */
-body {
-    font-family: 'Courier New', Courier, monospace;
-}
 
 .test{
     border: 1px solid red;
@@ -9,6 +6,40 @@ body {
 
 .reviewDiv{
     border: 1px solid green;
+}
+
+/* TESTS ABOVE */
+body {
+    font-family: 'Courier New', Courier, monospace;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.profile__container {
+    display: flex;
+    align-items: center;
+}
+
+.profilebutton {
+    height: 35px;
+}
+
+.profile-dropdown {
+    margin-left: 0px;
 }
 
 .splash__wrapper {
@@ -48,8 +79,13 @@ body {
 .splash__searchbar,
 .splash__guests,
 .splash__startdates,
-.splash__enddates {
+.splash__enddates,
+.splash__checkin,
+.splash__checkout {
     border:none;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 20px;
+    color: grey;
 }
 
 .splash__tisements-container {

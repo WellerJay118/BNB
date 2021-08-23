@@ -33,6 +33,7 @@ const ReviewForm = () => {
         if (newReview) {
             setReview('');
             setRating(0);
+            console.log(id)
             history.push(`/spots/${id}`);
         }
     };
