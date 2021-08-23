@@ -15,22 +15,51 @@ body {
 
 
 .allSpots__wrapper {
-    border: 1px solid red
+    border: 1px solid red;
+    justify-content: center;
 }
 
-.allspots__indivSpot--container {
+.allSpots__banner {
+    border: 1px solid green;
+}
+
+.allSpots__spots {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+}
+
+.bannerAndSpots {
+    display: flex;
+    /* justify-content: space-between; */
+    flex-direction: column;
+    max-width: 80%;
+    border: 2px solid black;
+
+}
+
+.allSpots__indivSpot--container {
     border: 1px solid purple;
+    width: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .allSpots__indivSpot--image {
-    /* border: 1px dotted black; */
+    height: 250px;
+    width: 250px;
+    border-radius: 7px;
 }
 
 .allSpots__indivSpot--details {
-    /* border: 1px dashed green; */
+    border: 1px dashed green;
 }
 
-
+.allSpots__indivSpot--location {
+    border: 1px solid orange;
+}
 
 
 

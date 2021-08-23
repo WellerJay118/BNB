@@ -15,25 +15,36 @@ const SpotsPage = () => {
 
     return (
         <div className="allSpots__wrapper">
-            <h1> SPOTS PAGE - RENDER BANNER COMPONENT HERE</h1>
 
-            {spots?.map((spot) =>
-                <div key={spot.id} className="allSpots__indivSpot--container" >
-                <NavLink to={`/spots/${spot.id}`} style={{ textDecoration: 'none', color: 'black'}}>
-                    <h3>{spot?.spotName}</h3>
-                        <div className="allSpots__indivSpot--image">
-                        {console.log(spot.Images[0])}
-                            {/* <img src={spot?.Images[0].url} alt='' /> */}
-                            IMAGE HERE
-                        </div>
-                        <div className="allSpots__indivSpot--details">
-                             Price {spot?.price}
-                             Guests {spot?.guestCap}
-                        </div>
-                    </NavLink>
+            <div className="bannerAndSpots">
+
+                <div className="allSpots__banner">
+                <h1> SPOTS PAGE - RENDER BANNER COMPONENT HERE</h1>
                 </div>
-                )
-            }
+
+                <div className="allSpots__spots">
+                    {spots?.map((spot) =>
+                        <div key={spot.id} className="allSpots__indivSpot--container" >
+                        <NavLink to={`/spots/${spot.id}`} style={{ textDecoration: 'none', color: 'black'}}>
+                            <h3>{spot?.spotName}</h3>
+
+                            <img className="allSpots__indivSpot--image" src={spot?.Images[0].url} alt='' />
+
+                            <div className="allSpots__indivSpot--details">
+                                <p>Price ${spot?.price} per night</p>
+                                <p>Guests : {spot?.guestCap}</p>
+                            </div>
+
+                            <div className="allSpots__indivSpot--location">
+                                    <p>{spot?.city}, {spot?.state}</p>
+                            </div>
+                        </NavLink>
+                        </div>
+                        )
+                    }
+                </div>
+
+            </div>
         </div>
     )
 }
