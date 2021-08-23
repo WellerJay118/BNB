@@ -17,7 +17,20 @@ label {
 input,
 textarea {
     font-family: 'Courier New', Courier, monospace;
+}
 
+.signupPage__button{
+    font-family: 'Courier New', Courier, monospace;
+    height: 30px;
+    font-size: 16px;
+    color:white;
+    background-color: rgb(177, 4, 47);
+    font-weight:bold;
+    width: 125px;
+    border-radius: 15px;
+    margin-left: 5px;
+    margin-bottom: 10px;
+    border: none;
 }
 
 .editSpot__button-delete:hover {
@@ -86,6 +99,26 @@ textarea {
     border: none;
 }
 
+.single__editbutton {
+    font-family: 'Courier New', Courier, monospace;
+    height: 30px;
+    font-size: 16px;
+    color:white;
+    background-color: rgb(177, 4, 47);
+    font-weight:bold;
+    width: 175px;
+    border-radius: 15px;
+    margin-left: 25px;
+    border: none;
+}
+
+.single__wrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+}
+
 .createSpot__wrapper {
     display: flex;
     flex-direction: column;
@@ -100,9 +133,11 @@ textarea {
 .createSpot__banner {
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 .createSpot__form input,
-.createSpot__form textarea{
+.createSpot__form textarea,
+.signupPage__input-field {
     font-family: 'Courier New', Courier, monospace;
     border-radius: 15px;
     width: 400px;
@@ -124,6 +159,22 @@ textarea {
     flex-direction: column;
     justify-content: center;
     align-content: center;
+    width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    background-color: white;
+    border-top: 1px solid black;
+    border-radius: 8px;
+}
+
+.signup__form{
+    /* display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center; */
+    /* display: inline-block; */
     width: 700px;
     margin-left: auto;
     margin-right: auto;
@@ -198,6 +249,21 @@ textarea {
     width: 250px;
     border-radius: 7px;
     margin-top: 20px;
+}
+
+.single__image {
+    height: 500px;
+    width: 800px;
+    border-radius: 7px;
+}
+
+.single__info-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    display: inline-block;
+    align-items: center;
 }
 
 .allSpots__indivSpot--details {
