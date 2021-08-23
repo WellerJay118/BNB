@@ -10,7 +10,7 @@
 * Node.js
 * React
 * Redux
-* CSS
+* CSS(no libraries, extensions, or bootstrapping)
 
 ### Running Locally
 * Make certain you have Node.js and PostgreSQL installed and up to date and that port 5000 in clear to be used for this process.
