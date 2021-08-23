@@ -15,36 +15,49 @@ body {
 
 
 .allSpots__wrapper {
-    border: 1px solid red;
+    /* border: 1px solid red; */
     justify-content: center;
+    align-items: center;
+    margin: auto;
+    padding: auto;
+    display: flex;
 }
 
 .allSpots__banner {
-    border: 1px solid green;
+    /* border: 1px solid green; */
+    display: flex;
+    justify-content: center;
 }
 
 .allSpots__spots {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    justify-content: center;
 
 }
 
 .bannerAndSpots {
     display: flex;
-    /* justify-content: space-between; */
     flex-direction: column;
-    max-width: 80%;
-    border: 2px solid black;
+    max-width: 90%;
+    /* justify-content: space-between; */
+    /* border: 2px solid black; */
 
 }
 
 .allSpots__indivSpot--container {
-    border: 1px solid purple;
-    width: 400px;
-    display: flex;
+    /* border: 1px solid purple; */
     justify-content: center;
     align-items: center;
+    width: 300px;
+    display: flex;
+    margin-bottom: 45px;
+    border-radius: 15px;
+}
+
+.allSpots__indivSpot--image:hover {
+    border: 1px black;
 }
 
 .allSpots__indivSpot--image {
@@ -54,11 +67,12 @@ body {
 }
 
 .allSpots__indivSpot--details {
-    border: 1px dashed green;
+    /* border: 1px dashed green; */
+    font-size: 12px;
 }
 
 .allSpots__indivSpot--location {
-    border: 1px solid orange;
+    /* border: 1px solid orange; */
 }
 
 
@@ -84,7 +98,7 @@ body {
     align-items: center;
     /* margin-left: auto;
     margin-right: auto; */
-    border: 1px solid black;
+    /* border: 1px solid black; */
     background-image: url('./components/Splash/splash.jpg');
     background-size:     cover;
     background-repeat:   no-repeat;
@@ -127,7 +141,7 @@ body {
 .splash__tisements-container--toprated,
 .splash__tisements-container--signup,
 .splash__tisements-container--lastbooked {
-    border: 1px solid black;
+    /* border: 1px solid black; */
     color: black;
     height: 150px;
     width: 150px;
@@ -180,6 +194,7 @@ body {
 
 .nav-links-container {
     /* border: 1px solid black; */
+    width: 100%;
     display: flex;
     flex-direction: row;
     justify-content:flex-end;
@@ -217,6 +232,11 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: white;
+}
+
+.profilebutton:active {
+    box-shadow: 0 4px 2px -2px gray;
 }
 
 .logout-button {
