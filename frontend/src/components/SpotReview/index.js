@@ -39,7 +39,7 @@ const handleDelete = (reviewId) => {
                 <p>{review?.User?.username}</p>
                 <p>Rating: {review?.rating}</p>
                 <p>Review: {review?.review}</p>
-                {sessionUser?.id === review?.User?.id ? (
+                {sessionUser?.id === review?.userId ? (
                     <button id={review.id} onClick={handleDelete}>Delete</button>
                 ):null }
             </div>

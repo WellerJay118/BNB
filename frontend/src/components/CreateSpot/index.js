@@ -14,7 +14,7 @@ const CreateSpot = () => {
     const [state, setState] = useState('');
     const [spotName, setSpotName] = useState('');
     const [description, setDescription] = useState('');
-    const [price, setPrice] = useState(null);
+    const [price, setPrice] = useState('');
     const [url, setUrl] = useState('');
 
     const createGuestCap = (e) => setGuestcap(e.target.value);
