@@ -47,15 +47,15 @@ const SingleSpot = () => {
                     ): null}
                 </div>
                 <div className="single__info-card">
+                    <div className="single__image-container">
                     <img className="single__image" src={singleSpot?.Images[0].url} alt='' />
-
-                </div>
-
-                <div className="single__reviewForm">
-                    {sessionUser ? <ReviewForm /> : null}
-                </div>
-                <div className="single__spotReviews">
-                    <SpotReview spotId={id} />
+                    </div>
+                    <div className="single__reviewForm">
+                        {sessionUser ? <ReviewForm /> : null}
+                    </div>
+                    <div className="single__spotReviews">
+                        <SpotReview spotId={id} />
+                    </div>
                 </div>
 
             </div>

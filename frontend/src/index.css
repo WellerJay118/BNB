@@ -56,6 +56,36 @@ textarea {
     border: none;
 }
 
+.review-submit {
+    height: 75px;
+    width: 400px;
+}
+
+
+.rate-select{
+    height: 40px;
+    width: 40px;
+    margin-left: 15px;
+}
+
+.rate-submit{
+    margin-top: 15px;
+}
+
+.rate-review{
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    margin-bottom: 15px;
+}
+
+.reviewform__wrapper{
+    display: flex;
+    flex-direction: column;
+
+}
+
 .createSpot__input-field:hover {
     box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.2);
 }
@@ -99,6 +129,20 @@ textarea {
     border: none;
 }
 
+.submitReview-button{
+    font-family: 'Courier New', Courier, monospace;
+    height: 30px;
+    font-size: 16px;
+    color:white;
+    background-color: rgb(177, 4, 47);
+    font-weight:bold;
+    width: 175px;
+    border-radius: 15px;
+    margin-left: 5px;
+    margin-bottom: 10px;
+    border: none;
+}
+
 .single__editbutton {
     font-family: 'Courier New', Courier, monospace;
     height: 30px;
@@ -112,12 +156,6 @@ textarea {
     border: none;
 }
 
-.single__wrapper{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-content: center;
-}
 
 .createSpot__wrapper {
     display: flex;
@@ -252,18 +290,43 @@ textarea {
 }
 
 .single__image {
-    height: 500px;
-    width: 800px;
+    max-height: 400px;
+    max-width: 900px;
     border-radius: 7px;
 }
 
+.single__wrapper{
+    /* display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center; */
+    display: inline-block;
+    margin-left: auto;
+    margin-right: auto;
+    /* border: 5px dotted black; */
+}
+
+.single__container {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.single__image-container {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+}
+
 .single__info-card {
+    /* border: 3px solid red; */
+    max-width: 1200px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-content: center;
-    display: inline-block;
-    align-items: center;
+    /* display: inline-block;
+    align-items: center; */
 }
 
 .allSpots__indivSpot--details {
