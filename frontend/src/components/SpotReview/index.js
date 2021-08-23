@@ -3,7 +3,7 @@ import { useDispatch, useSelector} from 'react-redux';
 import { useHistory } from 'react-router-dom';
 import { deleteReview, getReview } from '../../store/reviews';
 
-const SpotReview = ({ spotId, reviewId }) => {
+const SpotReview = ({ spotId, reviewId}) => {
     const history = useHistory();
     const dispatch = useDispatch();
     const reviews = useSelector(state => Object.values(state.reviews));
@@ -15,10 +15,20 @@ const SpotReview = ({ spotId, reviewId }) => {
         dispatch(getReview());
     }, [dispatch])
 
+    //reviewId below doesnt send right info to backend. reviewId needs to be the review id at that location. If I can pass the reviewId from the delete button this can work.
+/*
+const handleDelete = (reviewId) => {
+    return async(e) => {
+        e.preventDefault();
+        await dispathc(deleteReview(reviewId))
+        history.push(`/spots/${spotId}`)
+    }
+}
+*/
+
     const handleDelete = async(e) => {
         e.preventDefault();
-        console.log('reviewID', reviewId, 'spotId', spotId)
-        await dispatch(deleteReview(reviewId))
+        await dispatch(deleteReview(e.target.id))
         history.push(`/spots/${spotId}`)
     }
 
@@ -29,9 +39,8 @@ const SpotReview = ({ spotId, reviewId }) => {
                 <p>{review?.User?.username}</p>
                 <p>Rating: {review?.rating}</p>
                 <p>Review: {review?.review}</p>
-                {/* {console.log(spotReviews)} */}
                 {sessionUser?.id === review?.User?.id ? (
-                    <button onClick={handleDelete}>Delete</button>
+                    <button id={review.id} onClick={handleDelete}>Delete</button>
                 ):null }
             </div>
             )}

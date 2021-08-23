@@ -18,18 +18,19 @@ router.post('/', asyncHandler(async(req, res) => {
     return res.json(newReview);
 }));
 //delete /api/reviews/:reviewId
-// /spots/2
+
 router.delete('/:reviewId', asyncHandler(async(req, res) => {
-    // const reviewId = parseInt(req.params.reviewId);
-    console.log("%%%%%%%%%", reviewId)
     const { reviewId } = req.params;
     const review = await Review.findOne({where: {id: reviewId}})
+    await review.destroy();
+    // return res.json();
     const delReview = await review.destroy();
     if(review) {
-        return res.json({"Deleted": true})
+        return res.json({"deleted": true})
     } else {
-        return res.json({ "Deleted": false })
+        return res.json({ "deleted": false })
     }
 }));
+//bug noted for After making a review only the first one shows up with a Delete button.
 
 module.exports = router;

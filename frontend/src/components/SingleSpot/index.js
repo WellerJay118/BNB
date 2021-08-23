@@ -2,7 +2,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { useParams, useHistory } from "react-router";
 import { useEffect } from "react";
 import { getSpots } from "../../store/spots";
-// import { getReview } from "../../store/reviews";
+import { getReview } from "../../store/reviews";
 import SpotReview from "../SpotReview";
 import ReviewForm from "../ReviewForm";
 // import styles from "./SingleSpot.module.css"
@@ -21,7 +21,9 @@ const SingleSpot = () => {
     //     return element.id === parseInt(id)
     // })
 
-    // const reviews = useSelector(state => ({...state.reviews}))
+    // const reviews = useSelector(state => (Object.values(state.reviews)))
+    // const spotReviews = reviews.filter(review => Number(review.spotId) === Number(id));
+
 
     const singleSpot = spots?.find((element) => {
         return element.id === parseInt(id);
@@ -32,7 +34,7 @@ const SingleSpot = () => {
 
     useEffect(() => {
         dispatch(getSpots());
-        // dispatch(getReview());
+        dispatch(getReview());
     }, [dispatch]);
 
     return (
@@ -49,16 +51,19 @@ const SingleSpot = () => {
             </div>
 
             <div>
-                {/* {console.log(reviews)} */}
+                {/* {console.log('reviews', reviews)}
+                {console.log('spotid', id)}
+                {console.log('spotReviews', spotReviews)} */}
+                {/* {console.log('review', review)} */}
             {/* {reviews?.map((review) =>
             <SpotReview key={review.id} spotId={id} review={review} />
         )} */}
             </div>
             <div>
             {sessionUser ? <ReviewForm /> : null}
-            <SpotReview spotId={id}/>
-            </div>
+            <SpotReview spotId={id} />
             {/* for Spot Review above if i pass in review={review}  */}
+            </div>
             {/* Should be able to just render in the component of a review form or a booking form here, similar to App */}
 </>
 

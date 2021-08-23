@@ -22,7 +22,7 @@ const ReviewForm = () => {
     }, [review, rating])
 
     const handleSubmit = async(e) => {
-        e.preventDefault();
+        // e.preventDefault(); THIS IS A CHEAT TO ALLOW USER TO SEE DELETE BUTTON FOR THEIR REVIEW IMMEDIATELY AFTER POSTING IT.
         const payload = {
             userId: sessionUser.id,
             spotId: id,
@@ -33,6 +33,7 @@ const ReviewForm = () => {
         if (newReview) {
             setReview('');
             setRating(0);
+            console.log(id)
             history.push(`/spots/${id}`);
         }
     };
