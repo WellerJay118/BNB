@@ -61,15 +61,24 @@ textarea {
     width: 400px;
 }
 
+.reviewDiv {
+    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.2);
+    margin: 5px;
+    margin-bottom: 10px;
+}
 
 .rate-select{
     height: 40px;
     width: 40px;
     margin-left: 15px;
+    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.2);
 }
 
 .rate-submit{
     margin-top: 15px;
+}
+.rate-review textarea{
+    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.2);
 }
 
 .rate-review{
