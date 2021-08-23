@@ -57,72 +57,99 @@ const EditSpot = () => {
         history.push('/spots')
     }
 
+    const handleCancel = async(e) => {
+        e.preventDefault();
+        history.push(`/spots/${id}`);
+    }
+
     return (
-        <>
-            <form onSubmit={handleSubmit}>
+        <div className="createSpot__container">
+            <div className="createSpot__banner">
                 <h1>Edit your Listing</h1>
-                <input
-                    placeholder="Street Address"
-                    type="text"
-                    required
-                    value={address}
-                    onChange={updateAddress}
-                />
-                <input
-                    placeholder="City"
-                    type="text"
-                    required
-                    value={city}
-                    onChange={updateCity}
-                />
-                <input
-                    placeholder="State"
-                    type="text"
-                    required
-                    value={state}
-                    onChange={updateState}
-                />
-                <input
-                    placeholder="Property Name"
-                    type="text"
-                    required
-                    value={spotName}
-                    onChange={updateSpotName}
-                />
-                <input
-                    placeholder="Maximum Capacity"
-                    type="text"
-                    required
-                    value={guestCap}
-                    onChange={updateGuestCap}
-                />
-                <input
-                    placeholder="Description"
-                    type="text"
-                    required
-                    value={description}
-                    onChange={updateDescription}
-                />
-                <input
-                    placeholder="Price Per Night"
-                    type="number"
-                    required
-                    value={price}
-                    onChange={updatePrice}
-                />
-                <input
-                    placeholder="Image URL"
-                    type="text"
-                    value={url}
-                    onChange={updateUrl}
-                />
-                <button type="submit">Update</button>
-                {/* should do validationErrors.length > 0 to disable/enable */}
-                {/* onClick={(e) => history.push(`/spots/${id}`)} */}
-                <button type='click' onClick={handleDelete}>Delete this listing</button>
-            </form>
-            {/* small change */}
-        </>
+            </div>
+            <div className="createSpot__wrapper">
+                <div className="createSpot__form">
+
+                    <label>Location name or title</label>
+                        <input
+                            className="createSpot__input-field"
+                            placeholder="Property Name"
+                            type="text"
+                            required
+                            value={spotName}
+                            onChange={updateSpotName}
+                            />
+                        <label>Guests allowed</label>
+                        <input
+                            className="createSpot__input-field"
+                            placeholder="Maximum Capacity"
+                            type="text"
+                            required
+                            value={guestCap}
+                            onChange={updateGuestCap}
+                            />
+                        <label>Cost</label>
+                        <input
+                            className="createSpot__input-field"
+                            placeholder="Price Per Night"
+                            type="number"
+                            required
+                            value={price}
+                            onChange={updatePrice}
+                            />
+                        <label>Location</label>
+                        <input
+                            className="createSpot__input-field"
+                            placeholder="Street Address"
+                            type="text"
+                            required
+                            value={address}
+                            onChange={updateAddress}
+                            />
+                        <input
+                            className="createSpot__input-field"
+                            placeholder="City"
+                            type="text"
+                            required
+                            value={city}
+                            onChange={updateCity}
+                            />
+                        <input
+                            className="createSpot__input-field"
+                            placeholder="State"
+                            type="text"
+                            required
+                            value={state}
+                            onChange={updateState}
+                            />
+                        <label>Photo</label>
+                        <input
+                            className="createSpot__input-field"
+                            placeholder="Image URL"
+                            type="text"
+                            value={url}
+                            onChange={updateUrl}
+                            />
+                        <label>Description</label>
+                        <textarea
+                            className="createSpot__input--description"
+                            placeholder="Description"
+                            type="text"
+                            required
+                            value={description}
+                            onChange={updateDescription}
+                            />
+                        <div className="createSpot__button-container">
+                            <button className="createSpot__button" type="click" onClick={handleSubmit}>Update</button>
+                            {/* should do validationErrors.length > 0 to disable/enable */}
+                            {/* onClick={(e) => history.push(`/spots/${id}`)} */}
+                            <button className="editSpot__button-delete" type='click' onClick={handleDelete}>Delete listing</button>
+                            <button className="createSpot__button" type='click' onClick={handleCancel}>Cancel</button>
+                        </div>
+
+                </div>
+           </div>
+        </div>
     )
 
 }

@@ -33,10 +33,11 @@ const handleDelete = (reviewId) => {
     }
 
     return (
-        <div className="test"> REVIEWS COMPONENT
+        <div className="test">
             {spotReviews?.map((review) =>
             <div key={review?.id} className="reviewDiv">
                 <p>{review?.User?.username}</p>
+                {/* <p>{review?.updatedAt}</p> */}
                 <p>Rating: {review?.rating}</p>
                 <p>Review: {review?.review}</p>
                 {sessionUser?.id === review?.userId ? (

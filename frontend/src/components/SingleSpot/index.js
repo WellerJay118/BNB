@@ -38,34 +38,29 @@ const SingleSpot = () => {
     }, [dispatch]);
 
     return (
- <>
-            <h1>SINGLE SPOT COMPONENT</h1>
-            <div>
-                {/* <img src={singleSpot?.Images[0].url} alt='' /> IMAGES[0] IS UNDEFINED IF THERE IS NO IMAGE, THIS CAUSES ISSUES */}
-                <p>{singleSpot?.spotName}'s stay</p>
-
-                {singleSpot?.userId === sessionUser?.id ? (
-                    <button onClick={(e) => history.push(`/spots/${id}/edit`)}>Edit</button>
-                ): null}
+        <div className="single__container">
+            <div className="single__wrapper">
+                <div className="createSpot__banner">
+                    <h1>{singleSpot?.spotName}'s stay</h1>
+                    {singleSpot?.userId === sessionUser?.id ? (
+                        <button className="single__editbutton" onClick={(e) => history.push(`/spots/${id}/edit`)}>Edit Listing</button>
+                    ): null}
+                </div>
+                <div className="single__info-card">
+                    <div className="single__image-container">
+                    <img className="single__image" src={singleSpot?.Images[0].url} alt='' />
+                    </div>
+                    <div className="single__reviewForm">
+                        {sessionUser ? <ReviewForm /> : null}
+                    </div>
+                    <div className="single__spotReviews">
+                        <SpotReview spotId={id} />
+                    </div>
+                </div>
 
             </div>
 
-            <div>
-                {/* {console.log('reviews', reviews)}
-                {console.log('spotid', id)}
-                {console.log('spotReviews', spotReviews)} */}
-                {/* {console.log('review', review)} */}
-            {/* {reviews?.map((review) =>
-            <SpotReview key={review.id} spotId={id} review={review} />
-        )} */}
-            </div>
-            <div>
-            {sessionUser ? <ReviewForm /> : null}
-            <SpotReview spotId={id} />
-            {/* for Spot Review above if i pass in review={review}  */}
-            </div>
-            {/* Should be able to just render in the component of a review form or a booking form here, similar to App */}
-</>
+        </div>
 
     )
 

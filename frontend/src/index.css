@@ -1,45 +1,356 @@
-/* TODO Add site wide styles */
-
-.test{
+/* .test{
     border: 1px solid red;
 }
 
 .reviewDiv{
     border: 1px solid green;
-}
+} */
 
-/* TESTS ABOVE */
 body {
     font-family: 'Courier New', Courier, monospace;
 }
 
+label {
+    font-family: 'Courier New', Courier, monospace;
+}
 
+input,
+textarea {
+    font-family: 'Courier New', Courier, monospace;
+}
 
+.signupPage__button{
+    font-family: 'Courier New', Courier, monospace;
+    height: 30px;
+    font-size: 16px;
+    color:white;
+    background-color: rgb(177, 4, 47);
+    font-weight:bold;
+    width: 125px;
+    border-radius: 15px;
+    margin-left: 5px;
+    margin-bottom: 10px;
+    border: none;
+}
 
+.editSpot__button-delete:hover {
+    cursor: pointer;
+    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.2);
+}
 
+.editSpot__button-delete:active {
+    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.5);
+}
 
+.editSpot__button-delete {
+    width: 200px;
+    font-family: 'Courier New', Courier, monospace;
+    height: 30px;
+    font-size: 16px;
+    color:white;
+    background-color: rgb(177, 4, 47);
+    font-weight:bold;
+    border-radius: 15px;
+    margin-left: 5px;
+    margin-bottom: 10px;
+    border: none;
+}
 
+.review-submit {
+    height: 75px;
+    width: 400px;
+}
 
+.reviewDiv {
+    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.2);
+    margin: 5px;
+    margin-bottom: 10px;
+}
 
+.rate-select{
+    height: 40px;
+    width: 40px;
+    margin-left: 15px;
+    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.2);
+}
 
+.rate-submit{
+    margin-top: 15px;
+}
+.rate-review textarea{
+    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.2);
+}
 
-
-
-
-
-
-
-.profile__container {
+.rate-review{
     display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    margin-bottom: 15px;
+}
+
+.reviewform__wrapper{
+    display: flex;
+    flex-direction: column;
+
+}
+
+.createSpot__input-field:hover {
+    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.2);
+}
+
+.createSpot__input-field {
+    height: 30px;
+}
+.createSpot__button-container{
+    display: flex;
+    justify-content: center;
+}
+
+.createSpot__input--description {
+    height: 200px;
+    display: flex;
+    justify-content: flex-start;
+    align-content: flex-start;
+    overflow-wrap: normal;
+}
+
+.createSpot__button:active {
+    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.5);
+}
+
+.createSpot__button:hover {
+    cursor: pointer;
+    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.2);
+}
+
+.createSpot__button {
+    font-family: 'Courier New', Courier, monospace;
+    height: 30px;
+    font-size: 16px;
+    color:white;
+    background-color: rgb(177, 4, 47);
+    font-weight:bold;
+    width: 125px;
+    border-radius: 15px;
+    margin-left: 5px;
+    margin-bottom: 10px;
+    border: none;
+}
+
+.submitReview-button{
+    font-family: 'Courier New', Courier, monospace;
+    height: 30px;
+    font-size: 16px;
+    color:white;
+    background-color: rgb(177, 4, 47);
+    font-weight:bold;
+    width: 175px;
+    border-radius: 15px;
+    margin-left: 5px;
+    margin-bottom: 10px;
+    border: none;
+}
+
+.single__editbutton {
+    font-family: 'Courier New', Courier, monospace;
+    height: 30px;
+    font-size: 16px;
+    color:white;
+    background-color: rgb(177, 4, 47);
+    font-weight:bold;
+    width: 175px;
+    border-radius: 15px;
+    margin-left: 25px;
+    border: none;
+}
+
+
+.createSpot__wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    background-image:url('./components/Splash/splash.jpg');
+    background-size:     cover;
+    background-repeat:   no-repeat;
+    background-position: center center;
+}
+
+.createSpot__banner {
+    display: flex;
+    justify-content: center;
     align-items: center;
 }
-
-.profilebutton {
-    height: 35px;
+.createSpot__form input,
+.createSpot__form textarea,
+.signupPage__input-field {
+    font-family: 'Courier New', Courier, monospace;
+    border-radius: 15px;
+    width: 400px;
+    display: flex;
+    font-size: 16px;
+    margin: 10px;
+    width: 600px;
+    margin-left: 50px;
 }
 
-.profile-dropdown {
-    margin-left: 0px;
+.createSpot__form label{
+    font-size: 20px;
+    font-weight: bold;
+    margin-left: 35px;
+}
+
+.createSpot__form {
+    display: inline-block;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    background-color: white;
+    border-top: 1px solid black;
+    border-radius: 8px;
+}
+
+.signup__form{
+    /* display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center; */
+    /* display: inline-block; */
+    width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    background-color: white;
+    border-top: 1px solid black;
+    border-radius: 8px;
+}
+
+.allSpots__wrapper {
+    /* border: 1px solid red; */
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    padding: auto;
+    display: flex;
+}
+
+.allSpots__banner {
+    /* border: 1px solid green; */
+    display: flex;
+    justify-content: center;
+}
+
+.allSpots__spots {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    justify-content: center;
+    /* border: 1px solid black; */
+
+}
+
+.bannerAndSpots {
+    display: flex;
+    flex-direction: column;
+    max-width: 90%;
+    /* justify-content: space-between; */
+    /* border: 2px solid black; */
+
+}
+.allSpots__indivSpot--container:hover {
+    box-shadow: 5px 5px 5px 6px rgba(0, 0, 0, 0.2);
+    margin-top: -10px;
+    margin-left: -6px;
+}
+
+.allSpots__indivSpot--container:active {
+    box-shadow: 5px 5px 5px 6px rgba(0, 0, 0, 0.5);
+}
+
+.allSpots__indivSpot--container {
+    /* border: 1px solid purple; */
+    justify-content: center;
+    align-items: center;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 45px;
+    border-radius: 15px;
+    /* box-shadow: 8px 8px 6px -6px rgba(0, 0, 0, 0.2); */
+}
+
+/* .allSpots__indivSpot--image:hover {
+    border: 1px black;
+    box-shadow: 8px 8px 6px -6px rgba(0, 0, 0, 0.5);
+} */
+
+.allSpots__indivSpot--image {
+    height: 250px;
+    width: 250px;
+    border-radius: 7px;
+    margin-top: 20px;
+}
+
+.single__image {
+    max-height: 400px;
+    max-width: 900px;
+    border-radius: 7px;
+}
+
+.single__wrapper{
+    /* display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center; */
+    display: inline-block;
+    margin-left: auto;
+    margin-right: auto;
+    /* border: 5px dotted black; */
+}
+
+.single__container {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.single__image-container {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+}
+
+.single__info-card {
+    /* border: 3px solid red; */
+    max-width: 1200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    /* display: inline-block;
+    align-items: center; */
+}
+
+.allSpots__indivSpot--details {
+    /* border: 1px dashed green; */
+    font-size: 12px;
+}
+
+/* .allSpots__indivSpot--location {
+    border: 1px solid orange;
+} */
+
+
+.allSpots__indivSpot--image-container {
+    display: flex;
+    justify-content: center;
 }
 
 .splash__wrapper {
@@ -55,7 +366,7 @@ body {
     align-items: center;
     /* margin-left: auto;
     margin-right: auto; */
-    border: 1px solid black;
+    /* border: 1px solid black; */
     background-image: url('./components/Splash/splash.jpg');
     background-size:     cover;
     background-repeat:   no-repeat;
@@ -68,12 +379,25 @@ body {
     justify-content: space-evenly;
     margin: 15px auto;
     border-radius: 25px;
-    height: 40px;
+    height: 50px;
     align-items: center;
     background-color: white;
     padding-left: 7px;
     padding-right: 7px;
     /* need to do mediaquery for smaller than full screen. looks like trash on small screens. */
+}
+
+.splash__searchbar:hover,
+.splash__guests:hover,
+.splash__startdates:hover,
+.splash__enddates:hover {
+    background-color: lightgray;
+}
+
+.splash__checkin,
+.splash__checkout {
+    margin-left: 10px;
+    margin-right: 10px;
 }
 
 .splash__searchbar,
@@ -86,13 +410,13 @@ body {
     font-family: 'Courier New', Courier, monospace;
     font-size: 20px;
     color: grey;
+    border-radius: 15px;
 }
 
-.splash__tisements-container {
+/* .splash__tisements-container {
     display: flex;
     justify-content: space-around;
     background-color:white;
-
 }
 
 .splash__tisements-container--toprated,
@@ -105,8 +429,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-
-}
+} */
 
 .footer__wrapper{
     display: flex;
@@ -118,7 +441,21 @@ body {
     padding-top: 12px;
     justify-content: center;
     width: 100%;
+    border-top: solid 1px rgba(0, 0, 0, 0.2);
+
 }
+
+/* .footer__wrapper-splash {
+    display: flex;
+    position:fixed;
+    bottom: 0;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+    padding-top: 0px;
+    justify-content: center;
+    width: 100%;
+} */
 
 .footer__links{
     display: flex;
@@ -139,10 +476,12 @@ body {
 
 .nav-links-container {
     /* border: 1px solid black; */
+    width: 100%;
     display: flex;
     flex-direction: row;
     justify-content:flex-end;
     padding-bottom: 7px;
+    box-shadow: 0px 8px 6px -6px rgba(0, 0, 0, 0.2);
 }
 
 .Navbar-link:hover {
@@ -165,4 +504,40 @@ body {
 
 .profile-button {
     height: 25px;
+}
+
+
+.profilebutton {
+    cursor: pointer;
+    height: 30px;
+    width: 30px;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+}
+
+.profilebutton:active {
+    box-shadow: 0 4px 2px -2px gray;
+}
+
+.logout-button {
+    color: white;
+    border: none;
+    background-color: rgb(177, 4, 47);
+    border-radius: 18px;
+}
+
+.logout-button:hover {
+    cursor: pointer;
+}
+
+.profile-dropdown {
+    list-style-type:none;
+    margin-right: 15px;
+}
+.profile__container {
+    display: flex;
+    align-items: center;
 }

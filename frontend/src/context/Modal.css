@@ -36,11 +36,14 @@
 .modal-login__button {
   width: 120px;
   margin: 20px;
+  margin-left: 30px;
   border: none;
   color: white;
   background-color: rgb(177, 4, 47);
   border-radius: 18px;
   font-size: 24px;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: bold;
 }
 
 .modal-login__cred {
@@ -48,4 +51,12 @@
 }
 .modal-container h1 {
   padding-left: 35px;
+}
+
+.login-words {
+  padding-left: 35px;
+}
+
+.login-form-modal {
+  margin-top: 0px;
 }

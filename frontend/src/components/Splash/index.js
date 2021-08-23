@@ -1,3 +1,4 @@
+// import Footer from "../Navigation/footer"
 
 const SplashPage = () => {
     //things and stuff
@@ -9,11 +10,14 @@ const SplashPage = () => {
                         <input className="splash__searchbar" type="text" placeholder="Search"></input>
                         <input className="splash__guests" type="number" placeholder="Guest Count"></input>
                         <label className="splash__checkin">Check-in:</label>
-                        <input className="splash__startdates" type="date"></input>
+                            <input className="splash__startdates" type="date"></input>
                         <label className="splash__checkout">Check-out:</label>
-                        <input className="splash__enddates" type="date"></input>
+                            <input className="splash__enddates" type="date"></input>
                     </div>
                 </div>
+                {/* <div className="footer__wrapper-splash">
+                    <Footer />
+                </div> */}
 
                 {/* <div className="splash__tisements-container">
                     <div className="splash__tisements-container--toprated">

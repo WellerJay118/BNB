@@ -41,27 +41,36 @@ const ReviewForm = () => {
 
 
     return (
-        <div className="test">
-            <form onSubmit={handleSubmit}>
+        <div className="reviewform__container">
+            <div className="reviewform__wrapper">
                 <h1>Please Review Us</h1>
-                <select value={rating} onChange={(e) => setRating(e.target.value)}>
-                    <option disabled value="0"></option>
-                    <option value={1}>1</option>
-                    <option value={2}>2</option>
-                    <option value={3}>3</option>
-                    <option value={4}>4</option>
-                    <option value={5}>5</option>
-                </select>
-                <textarea
-                    value={review}
-                    placeholder="Please only leave your reviews here, nothing else..."
-                    onChange={(e) => setReview(e.target.value)}
-                />
+                <div className="rate-review">
+                    <textarea
+                        className="review-submit"
+                        value={review}
+                        placeholder="Please only leave your reviews here, nothing else..."
+                        onChange={(e) => setReview(e.target.value)}
+                    />
+                    <div className="rate-submit">
+                        <label>Rating</label>
+                        <select value={rating} onChange={(e) => setRating(e.target.value)} className="rate-select">
+                            <option disabled value="0"></option>
+                            <option value={1}>1</option>
+                            <option value={2}>2</option>
+                            <option value={3}>3</option>
+                            <option value={4}>4</option>
+                            <option value={5}>5</option>
+                        </select>
+                    </div>
+                </div>
                 <button
-                type="submit"
+                className="submitReview-button"
+                type="click"
                 disabled={valErrors.length > 0}
+                onClick={handleSubmit}
                 >Submit Review</button>
-            </form>
+
+            </div>
         </div>
     )
 };
