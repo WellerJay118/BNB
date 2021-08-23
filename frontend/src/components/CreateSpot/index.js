@@ -22,7 +22,8 @@ const CreateSpot = () => {
     useEffect(() => {
         const errors = [];
         if(!url.includes(".com")) errors.push("Please include an image URL, don't break my site");
-    });
+        setValidationErrors(errors)
+    }, [url]);
 
 
     const createGuestCap = (e) => setGuestcap(e.target.value);
