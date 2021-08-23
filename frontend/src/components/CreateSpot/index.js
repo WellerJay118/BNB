@@ -67,7 +67,7 @@ const CreateSpot = () => {
                 </div>
             <div className="createSpot__wrapper">
                 <div className="createSpot__form">
-                <form onSubmit={handleSubmit}>
+
                         <label>Location name or title</label>
                         <input
                             className="createSpot__input-field"
@@ -132,7 +132,7 @@ const CreateSpot = () => {
                             onChange={createUrl}
                             />
                         <label>Description</label>
-                        <input
+                        <textarea
                             className="createSpot__input--description"
                             placeholder="Description:"
                             type="text"
@@ -140,9 +140,8 @@ const CreateSpot = () => {
                             value={description}
                             onChange={createDescription}
                         />
-                    </form>
                         <div className="createSpot__button-container">
-                        <button className="createSpot__button" disabled={validationErrors.length > 0}type="submit">List!</button>
+                        <button className="createSpot__button" disabled={validationErrors.length > 0}type="click" onClick={handleSubmit}>List!</button>
                         <button className="createSpot__button" type='click' onClick={handleCancel}>Cancel</button>
                         </div>
 

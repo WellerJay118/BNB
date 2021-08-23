@@ -14,9 +14,33 @@ label {
     font-family: 'Courier New', Courier, monospace;
 }
 
-input {
+input,
+textarea {
     font-family: 'Courier New', Courier, monospace;
 
+}
+
+.editSpot__button-delete:hover {
+    cursor: pointer;
+    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.2);
+}
+
+.editSpot__button-delete:active {
+    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.5);
+}
+
+.editSpot__button-delete {
+    width: 200px;
+    font-family: 'Courier New', Courier, monospace;
+    height: 30px;
+    font-size: 16px;
+    color:white;
+    background-color: rgb(177, 4, 47);
+    font-weight:bold;
+    border-radius: 15px;
+    margin-left: 5px;
+    margin-bottom: 10px;
+    border: none;
 }
 
 .createSpot__input-field:hover {
@@ -36,6 +60,7 @@ input {
     display: flex;
     justify-content: flex-start;
     align-content: flex-start;
+    overflow-wrap: normal;
 }
 
 .createSpot__button:active {
@@ -76,7 +101,8 @@ input {
     display: flex;
     justify-content: center;
 }
-.createSpot__form input{
+.createSpot__form input,
+.createSpot__form textarea{
     font-family: 'Courier New', Courier, monospace;
     border-radius: 15px;
     width: 400px;
