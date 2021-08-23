@@ -9,6 +9,7 @@ function ProfileButton({ user }) {
   const openMenu = () => {
     if (showMenu) return;
     setShowMenu(true);
+    //can add a toggle here to hide the profile button
   };
 
   useEffect(() => {
@@ -30,7 +31,7 @@ function ProfileButton({ user }) {
 
   return (
     <div className="profile__container">
-      <button className="profilebutton" onClick={openMenu}>
+      <button className="profilebutton" hidden={showMenu} onClick={openMenu}>
         <i className="far fa-address-card" />
       </button>
       {showMenu && (
@@ -38,7 +39,7 @@ function ProfileButton({ user }) {
           <li>{user.username}</li>
           <li>{user.email}</li>
           <li>
-            <button onClick={logout}>Log Out</button>
+            <button className="logout-button" onClick={logout}>Log Out</button>
           </li>
         </ul>
       )}

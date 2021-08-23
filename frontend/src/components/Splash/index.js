@@ -1,4 +1,4 @@
-
+import Footer from "../Navigation/footer"
 const SplashPage = () => {
     //things and stuff
 
@@ -13,6 +13,9 @@ const SplashPage = () => {
                         <label className="splash__checkout">Check-out:</label>
                         <input className="splash__enddates" type="date"></input>
                     </div>
+                </div>
+                <div className="footer__wrapper-splash">
+                    <Footer />
                 </div>
 
                 {/* <div className="splash__tisements-container">

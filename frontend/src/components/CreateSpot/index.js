@@ -2,6 +2,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { useState } from "react";
 import { useHistory } from "react-router";
 import { createSpot } from "../../store/spots";
+import Footer from "../Navigation/footer";
 
 const CreateSpot = () => {
     const dispatch = useDispatch();
@@ -47,7 +48,6 @@ const CreateSpot = () => {
 
 
     return (
-        <>
         <div>
             <h1>Create your listing</h1>
             <form onSubmit={handleSubmit}>
@@ -108,8 +108,11 @@ const CreateSpot = () => {
                 />
                 <button type="submit">Create your own Listing</button>
             </form>
+            {/* <div className="footer__wrapper-splash">
+                <Footer />
+            </div> */}
         </div>
-        </>
+
     );
 }
 
