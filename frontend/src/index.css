@@ -14,6 +14,11 @@ label {
     font-family: 'Courier New', Courier, monospace;
 }
 
+input {
+    font-family: 'Courier New', Courier, monospace;
+
+}
+
 .createSpot__input-field:hover {
     box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.2);
 }
@@ -184,13 +189,6 @@ label {
     justify-content: center;
 }
 
-
-
-
-
-
-
-
 .splash__wrapper {
     /* width: 70%;
     height: 500px; */
@@ -217,12 +215,25 @@ label {
     justify-content: space-evenly;
     margin: 15px auto;
     border-radius: 25px;
-    height: 40px;
+    height: 50px;
     align-items: center;
     background-color: white;
     padding-left: 7px;
     padding-right: 7px;
     /* need to do mediaquery for smaller than full screen. looks like trash on small screens. */
+}
+
+.splash__searchbar:hover,
+.splash__guests:hover,
+.splash__startdates:hover,
+.splash__enddates:hover {
+    background-color: lightgray;
+}
+
+.splash__checkin,
+.splash__checkout {
+    margin-left: 10px;
+    margin-right: 10px;
 }
 
 .splash__searchbar,
@@ -235,27 +246,26 @@ label {
     font-family: 'Courier New', Courier, monospace;
     font-size: 20px;
     color: grey;
+    border-radius: 15px;
 }
 
-.splash__tisements-container {
+/* .splash__tisements-container {
     display: flex;
     justify-content: space-around;
     background-color:white;
-
 }
 
 .splash__tisements-container--toprated,
 .splash__tisements-container--signup,
 .splash__tisements-container--lastbooked {
-    /* border: 1px solid black; */
+    border: 1px solid black;
     color: black;
     height: 150px;
     width: 150px;
     display: flex;
     align-items: center;
     justify-content: center;
-
-}
+} */
 
 .footer__wrapper{
     display: flex;
