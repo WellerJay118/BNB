@@ -23,3 +23,10 @@
   * `npx dotenv sequelize-cli db:seed:all`
 * Start both `backend` and `frontend` servers using the `npm start` command while in their respective folders. This may take a moment before opening a new web browser.
 
+### Future features and planned implementation
+* User profiles that allow access to all of that User's bookings, reviews, editable information, etc. This will require a Database update.
+* Working Spot Search implementation that autopopulates/autofills suggestion.
+* AWS Image upload, drag and drop.
+* Google Maps API implementation.
+* Fully useable `Booking` CRUD capabilities.
+* Additional styling once access to more 
