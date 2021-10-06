@@ -31,8 +31,8 @@ function Navigation({ isLoaded }){
         <LoginFormModal />
         <NavLink className="Navbar-link" to="/signup">Sign Up</NavLink>
         <div>
-            <button className="navbar-button Navbar-link" onClick={demoLogin}>Demo Login</button>
-          </div>
+          <button className="navbar-button Navbar-link" onClick={demoLogin}>Demo Login</button>
+        </div>
       </>
     );
   }
