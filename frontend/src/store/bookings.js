@@ -66,7 +66,9 @@ export const deleteBooking = (bookingId) => async(dispatch) => {
     }
 }
 
-const bookingsReducer = (state = initalState, action) => {
+let initialState = {}
+
+const bookingsReducer = (state = initialState, action) => {
     let newState = {...state};
     switch(action.type) {
         case SET_BOOKING:
