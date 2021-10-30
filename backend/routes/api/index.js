@@ -3,11 +3,13 @@ const sessionRouter = require('./session.js');
 const usersRouter = require('./users.js');
 const spotsRouter = require('./spots');
 const reviewsRouter = require('./reviews');
+const bookingsRouter = require('./booking')
 
 router.use('/session', sessionRouter);
 router.use('/users', usersRouter);
 router.use('/spots', spotsRouter);
 router.use('/reviews', reviewsRouter);
+router.use('/bookings', bookingsRouter)
 
 module.exports = router;
 
