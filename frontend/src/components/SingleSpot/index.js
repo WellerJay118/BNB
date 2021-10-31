@@ -6,6 +6,7 @@ import { getReview } from "../../store/reviews";
 import SpotReview from "../SpotReview";
 import ReviewForm from "../ReviewForm";
 import BookingForm from "../BookingForm";
+// import MapContainer from "../Maps";
 // import styles from "./SingleSpot.module.css"
 
 
@@ -84,8 +85,12 @@ const SingleSpot = () => {
                     </div>
 
 
+
                 </div>
 
+                    {/* <div className="maptest">
+                        <MapContainer spots={singleSpot} />
+                    </div> */}
                 </div>
 
             </div>

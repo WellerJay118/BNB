@@ -62,7 +62,7 @@ textarea {
 }
 
 .reviewDiv-container {
-    width: 70%;
+    width: 100%;
     /* border: 1px solid black; */
 }
 
@@ -553,6 +553,7 @@ button:hover{
     /* border: 1px solid black; */
     display: flex;
     flex-direction: row;
+    justify-content: space-around;
     /* align-items: center; */
 }
 
@@ -630,5 +631,10 @@ button:hover{
 
 .single__spotReviews{
     /* border: 1px solid black; */
-    width: 50%;
+    width: 40%;
+}
+
+.maptest{
+    width: 900px;
+    height: 400px;
 }
