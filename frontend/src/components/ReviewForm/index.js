@@ -45,12 +45,6 @@ const ReviewForm = () => {
             <div className="reviewform__wrapper">
                 <h1>Please Review Us</h1>
                 <div className="rate-review">
-                    <textarea
-                        className="review-submit"
-                        value={review}
-                        placeholder="Please only leave your reviews here, nothing else..."
-                        onChange={(e) => setReview(e.target.value)}
-                    />
                     <div className="rate-submit">
                         <label>Rating</label>
                         <select value={rating} onChange={(e) => setRating(e.target.value)} className="rate-select">
@@ -62,13 +56,21 @@ const ReviewForm = () => {
                             <option value={5}>5</option>
                         </select>
                     </div>
+                    <textarea
+                        className="review-submit"
+                        value={review}
+                        placeholder="Please only leave your reviews here, nothing else..."
+                        onChange={(e) => setReview(e.target.value)}
+                    />
                 </div>
                 <button
                 className="submitReview-button"
                 type="click"
                 disabled={valErrors.length > 0}
                 onClick={handleSubmit}
-                >Submit Review</button>
+                >
+                    Submit Review
+                </button>
 
             </div>
         </div>

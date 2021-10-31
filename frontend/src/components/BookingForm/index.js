@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { useHistory } from 'react-router-dom'
 import { createBooking } from "../../store/bookings";
-
+import DatePicker from "react-datepicker";
 
 
 
@@ -45,27 +45,58 @@ const BookingForm = ({spotId}) => {
         const booking = await dispatch(createBooking(bookingPayload))
         if (booking) history.push('/spots')
     }
+    // let calendarToggle = true
+    // const handleCancel = (e) => {
+    //     e.preventDefault();
+    //     setStartDate('')
+    //     setEndDate('')
+    //     calendarToggle = true
+    // }
+
+    // const handleStart = (e) => {
+        //     setStartDate(e)
+        //     calendarToggle = false
+        // }
+        const handleCancel = (e) => {
+            e.preventDefault();
+            setStartDate('')
+            setEndDate('')
+
+    }
+
 
     return (
         <div>
-            <div>
-                <form onSubmit={handleSubmit}>
-                    <label>Check-in</label>
-                    <input
-                    type="datetime-local"
+            <div className="booking__form-container">
+
+                <div className="booking__startDate">
+                    <DatePicker
+                    placeholderText="Click to select a Checkin Date"
+                    filterDate={date => {return new Date() < date}}
                     value={startDate}
-                    onChange={(e) => setStartDate(e.target.value)}
+                    selected={startDate}
+                    dateFormat='yyyy-MM-dd'
+                    inline
+                    onChange={date => setStartDate(date)}
+                    required
                     />
-                    <label>Check-out</label>
-                    <input
-                    type="datetime-local"
+                {/* <label>1234</label> */}
+                    <DatePicker
+                    placeholderText="Click to select a Checkout Date"
                     value={endDate}
-                    onChange={(e) => setEndDate(e.target.value)}
+                    onChange={date => setEndDate(date)}
+                    filterDate={date => {return new Date() < date}}
+                    selected={endDate}
+                    dateFormat='yyyy-MM-dd'
+                    inline
+                    required
                     />
+                </div>
+                <div className="booking__buttons">
+                    <button onClick={handleSubmit}>Book!</button>
+                    <button onClick={handleCancel}>Cancel</button>
+                </div>
 
-                    <button type="submit">Book!</button>
-
-                </form>
             </div>
         </div>
     )
