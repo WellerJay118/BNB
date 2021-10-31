@@ -1,4 +1,3 @@
-import { remove } from "js-cookie";
 import { csrfFetch } from "./csrf";
 
 const SET_BOOKING = 'bookings/setBookings'

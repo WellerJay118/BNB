@@ -5,7 +5,7 @@ import { getSpots } from "../../store/spots";
 import { getReview } from "../../store/reviews";
 import SpotReview from "../SpotReview";
 import ReviewForm from "../ReviewForm";
-import BookingForm from "../BookingForm/BookingForm";
+import BookingForm from "../BookingForm";
 // import styles from "./SingleSpot.module.css"
 
 
