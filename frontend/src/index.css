@@ -642,6 +642,7 @@ button:hover{
 .maptest{
     width: 900px;
     height: 400px;
+    margin-left: 20%;
 }
 
 .splash__searchbar-container button {

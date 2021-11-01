@@ -6,7 +6,7 @@ import { getReview } from "../../store/reviews";
 import SpotReview from "../SpotReview";
 import ReviewForm from "../ReviewForm";
 import BookingForm from "../BookingForm";
-// import MapContainer from "../Maps";
+import MapContainer from "../Maps";
 // import styles from "./SingleSpot.module.css"
 
 
@@ -26,17 +26,17 @@ const SingleSpot = () => {
     const spots = useSelector(state => Object.values(state.spots));
     // const spots = useSelector(state => state.spots)
 
-    // const singleSpot = Object.values(spots)?.find((element) => {
-    //     return element.id === parseInt(id)
-    // })
+    const singleSpot = Object.values(spots)?.find((element) => {
+        return element.id === parseInt(id)
+    })
 
     // const reviews = useSelector(state => (Object.values(state.reviews)))
     // const spotReviews = reviews.filter(review => Number(review.spotId) === Number(id));
 
 
-    const singleSpot = spots?.find((element) => {
-        return element.id === parseInt(id);
-    })
+    // const singleSpot = spots?.find((element) => {
+    //     return element.id === parseInt(id);
+    // })
 
     // const singleSpot = spots.filter(spot => Number(spot.id) === Number(id);
 
@@ -88,9 +88,9 @@ const SingleSpot = () => {
 
                 </div>
 
-                    {/* <div className="maptest">
+                    <div className="maptest">
                         <MapContainer spots={singleSpot} />
-                    </div> */}
+                    </div>
                 </div>
 
             </div>
