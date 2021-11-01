@@ -14,6 +14,9 @@ const app = express();
 
 app.use(morgan('dev')); //logs information about requests and responses
 app.use(cookieParser()); //parses cookies
+
+app.use(express.urlencoded({ extended: false }));
+
 app.use(express.json()); //parses JSON bodies of requests with Content-Type of "application/json"
 
 if (!isProduction) {

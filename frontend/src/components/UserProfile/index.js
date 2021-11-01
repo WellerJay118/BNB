@@ -53,7 +53,7 @@ function UserProfile() {
                     {userBookings && userBookings.map((booking) =>
                     <div key={booking.id} className="profile__single-info-booking">
                         {/* {console.log(spots[booking.spotId - 1], "!!!!!")} */}
-                        <span>{spots[booking.spotId - 1].spotName}'s location, Checkin: {booking.startDate}, Checkout: {booking.endDate}</span>
+                        <span>{spots[booking.spotId - 1].spotName}'s location: Checkin: {booking.startDate}, Checkout: {booking.endDate}</span>
                         <div className="profile__single-info-booking--buttons">
                             <button onClick={(e) => history.push(`/spots/${booking.spotId}`)}>View</button>
                             <button id={booking.id} onClick={handleBookingDelete}>Delete</button>
