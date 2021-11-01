@@ -26,9 +26,10 @@ const removeBooking = (bookingId) => ({
 })
 
 export const fetchAllBookings = () => async(dispatch) => {
-    const res = await csrfFetch('/api/bookings')
+    const res = await fetch('/api/bookings')
     const bookings = await res.json();
     dispatch(setBookings(bookings))
+    // return bookings
 }
 
 export const createBooking = (booking) => async(dispatch) => {
@@ -72,9 +73,9 @@ const bookingsReducer = (state = initialState, action) => {
     switch(action.type) {
         case SET_BOOKING:
             action.bookings.forEach(booking => {
-                newState[booking.id] = action.booking
+                newState[booking.id] = booking
             })
-            return newState
+            return newState;
 
         case POST_BOOKING: {
             newState[action.booking.id] = action.booking

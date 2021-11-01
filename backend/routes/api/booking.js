@@ -4,9 +4,10 @@ const { Spot, Booking } = require("../../db/models");
 
 const router = express.Router();
 
-router.get('/', asyncHandler(async(req,res) => {
-    const { id } = req.user
-    const bookings = await Booking.findAll({where: {userId:id}, include: Spot})
+router.get('/', asyncHandler(async(req, res) => {
+    // console.log("AAAA", req.params)
+    // const { id } = req.user
+    const bookings = await Booking.findAll()
     return res.json(bookings);
 }))
 
