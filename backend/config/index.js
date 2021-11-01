@@ -11,4 +11,9 @@ module.exports = {
       secret: process.env.JWT_SECRET,
       expiresIn: process.env.JWT_EXPIRES_IN,
     },
+    // googleMapsAPIKey: process.env.MAPS_API_KEY,
+    awsS3Config: {
+      accessKey: process.env.AWS_ACCESS_KEY_ID,
+      secretAcces: process.env.AWS_SECRET_ACCESS_KEY
+    }
   };

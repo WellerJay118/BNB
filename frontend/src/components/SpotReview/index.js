@@ -3,7 +3,7 @@ import { useDispatch, useSelector} from 'react-redux';
 import { useHistory } from 'react-router-dom';
 import { deleteReview, getReview } from '../../store/reviews';
 
-const SpotReview = ({ spotId, reviewId}) => {
+const SpotReview = ({ spotId }) => {
     const history = useHistory();
     const dispatch = useDispatch();
     const reviews = useSelector(state => Object.values(state.reviews));
@@ -33,7 +33,7 @@ const handleDelete = (reviewId) => {
     }
 
     return (
-        <div className="test">
+        <div className="reviewDiv-container">
             {spotReviews?.map((review) =>
             <div key={review?.id} className="reviewDiv">
                 <p>{review?.User?.username}</p>

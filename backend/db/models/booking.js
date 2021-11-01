@@ -4,7 +4,9 @@ module.exports = (sequelize, DataTypes) => {
     spotId: DataTypes.INTEGER,
     userId: DataTypes.INTEGER,
     startDate: DataTypes.DATEONLY,
-    endDate: DataTypes.DATEONLY
+    endDate: DataTypes.DATEONLY,
+    // checkIn: DataTypes.TIME,
+    // checkOut: DataTypes.TIME
   }, {});
   Booking.associate = function(models) {
     Booking.belongsTo(models.Spot, {foreignKey: 'spotId'}),

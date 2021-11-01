@@ -1,18 +1,22 @@
 // import Footer from "../Navigation/footer"
 
+import { useHistory } from "react-router";
+
 const SplashPage = () => {
     //things and stuff
+    const history = useHistory();
 
     return (
             <div className="splash__wrapper">
                 <div className="splash__searchbar-wrapper">
                     <div className="splash__searchbar-container">
-                        <input className="splash__searchbar" type="text" placeholder="Search"></input>
-                        <input className="splash__guests" type="number" placeholder="Guest Count"></input>
+                        <button onClick={(e) => history.push('/spots')}>Explore Williston</button>
+                        {/* <input className="splash__searchbar" type="text" placeholder="Search"></input> */}
+                        {/* <input className="splash__guests" type="number" placeholder="Guest Count"></input>
                         <label className="splash__checkin">Check-in:</label>
                             <input className="splash__startdates" type="date"></input>
                         <label className="splash__checkout">Check-out:</label>
-                            <input className="splash__enddates" type="date"></input>
+                            <input className="splash__enddates" type="date"></input> */}
                     </div>
                 </div>
                 {/* <div className="footer__wrapper-splash">

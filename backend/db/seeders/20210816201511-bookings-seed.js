@@ -3,7 +3,7 @@
 module.exports = {
   up: (queryInterface, Sequelize) => {
     return queryInterface.bulkInsert('Bookings', [
-      {	userId:	2, spotId:	1, startDate:	"2021-07-27", endDate:	"2021-07-28", createdAt:	new Date(), updatedAt:	new Date()	},
+      // {	userId:	2, spotId:	1, startDate:	"2021-07-27", endDate:	"2021-07-28", checkIn: "14:00", checkOut: "11:00", createdAt:	new Date(), updatedAt:	new Date()	},
       {	userId:	3, spotId:	2, startDate:	"2021-07-26", endDate:	"2021-07-28", createdAt:	new Date(), updatedAt:	new Date()	},
       {	userId:	4, spotId:	3, startDate:	"2021-07-26", endDate:	"2021-07-30", createdAt:	new Date(), updatedAt:	new Date()	},
       {	userId:	5, spotId:	4, startDate:	"2021-07-26", endDate:	"2021-07-30", createdAt:	new Date(), updatedAt:	new Date()	},
