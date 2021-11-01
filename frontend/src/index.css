@@ -8,6 +8,8 @@
 
 body {
     font-family: 'Courier New', Courier, monospace;
+    overflow-x: hidden;
+    /* width: 100vw; */
 }
 
 label {
@@ -334,6 +336,7 @@ button:hover{
     background-size:     cover;
     background-repeat:   no-repeat;
     background-position: center center;
+
 }
 
 .splash__searchbar-container {
