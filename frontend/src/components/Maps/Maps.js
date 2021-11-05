@@ -24,28 +24,6 @@ const options = {
     };
 
 
-  // const [markersArr, setMarkersArr] = useState([])
-  // const [lat, setLat] = useState(0)
-  // const [lng, setLng] = useState(0)
-
-  // useEffect(() => {
-  //   const newArray = []
-  //   if (spots?.length) {
-  //     setLat(+spots[0]?.lat)
-  //     setLng(+spots[0]?.lng)
-  //     spots?.forEach(spot => {
-  //       const obj = {}
-  //       obj['spotName'] = spot?.spotName
-  //       obj['lat'] = spot?.lat
-  //       obj['lng'] = spot?.lng
-  //       newArray.push(obj)
-  //     })
-  //     setMarkersArr(newArray)
-  //   } else {
-  //     setLat(0)
-  //     setLng(0)
-  //   }
-  // }, [spots])
 
   return (
     <>
@@ -60,11 +38,6 @@ const options = {
             position={center}
             >
           </Marker>
-            {/* {markersArr.map(marker => <Marker
-            key={marker.name}
-            position={{ lat: +marker.lat, lng: +marker.lng }}>
-          </Marker>
-          )} */}
         </GoogleMap>
       )}
     </>
